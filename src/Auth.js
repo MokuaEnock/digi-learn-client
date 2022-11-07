@@ -4,7 +4,7 @@ import React, { useState } from "react"
 // npm install -save bootstrap
 // then install react dom
 // npm install --save react-router-dom
-function Auth(props) {
+function Login(props) {
   let [authMode, setAuthMode] = useState("signin")
 
   const changeAuthMode = () => {
@@ -101,4 +101,4 @@ function Auth(props) {
     </div>
   )
 }
-export default Auth
+export default Login
