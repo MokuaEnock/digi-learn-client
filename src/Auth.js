@@ -1,6 +1,9 @@
 
 import React, { useState } from "react"
-
+// first install bootstrap
+// npm install -save bootstrap
+// then install react dom
+// npm install --save react-router-dom
 function Auth(props) {
   let [authMode, setAuthMode] = useState("signin")
 
