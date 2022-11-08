@@ -5,6 +5,25 @@ import React, { useState } from "react"
 // then install react dom
 // npm install --save react-router-dom
 function Login(props) {
+  // form input controls
+  const [state, setState] = useState({
+    email: "",
+    password: ""
+  });
+
+  const handleChange = (event) => {
+    setState((prevProps) => ({
+      ...prevProps,
+      [event.target.name]: event.target.value
+    }));
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    console.log(state);
+  };
+
+// switch between sign in and sign up
   let [authMode, setAuthMode] = useState("signin")
 
   const changeAuthMode = () => {
@@ -14,7 +33,7 @@ function Login(props) {
   if (authMode === "signin") {
     return (
       <div className="Auth-form-container">
-        <form className="Auth-form">
+        <form className="Auth-form" onSubmit={handleSubmit}>
           <div className="Auth-form-content">
             <h3 className="Auth-form-title">Sign In</h3>
             <div className="text-center">
@@ -29,6 +48,9 @@ function Login(props) {
                 type="email"
                 className="form-control mt-1"
                 placeholder="Enter email"
+                name="email"
+                value={state.email}
+                onChange={handleChange}
               />
             </div>
             <div className="form-group mt-3">
@@ -37,6 +59,9 @@ function Login(props) {
                 type="password"
                 className="form-control mt-1"
                 placeholder="Enter password"
+                name="password"
+                value={state.password}
+                onChange={handleChange}
               />
             </div>
             <div className="d-grid gap-2 mt-3">
@@ -55,7 +80,7 @@ function Login(props) {
 
   return (
     <div className="Auth-form-container">
-      <form className="Auth-form">
+      <form className="Auth-form" onSubmit={handleSubmit}>
         <div className="Auth-form-content">
           <h3 className="Auth-form-title">Sign In</h3>
           <div className="text-center">
@@ -67,7 +92,7 @@ function Login(props) {
           <div className="form-group mt-3">
             <label>Full Name</label>
             <input
-              type="email"
+              type="text"
               className="form-control mt-1"
               placeholder="e.g Jane Doe"
             />
