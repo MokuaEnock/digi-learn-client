@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import { useNavigate } from "react-router-dom";
 function Signup(props){
     // form input controls
   const [state, setState] = useState({
@@ -17,8 +18,12 @@ function Signup(props){
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log(state);
-
   };
+  // navigation to sign in
+  const navigate = useNavigate();
+  const navigateToSignIn = () =>{
+    navigate("/login")
+  }
     return (
         <div className="Auth-form-container">
           <form className="Auth-form" onSubmit={handleSubmit}>
@@ -26,7 +31,7 @@ function Signup(props){
               <h3 className="Auth-form-title">Sign Up</h3>
               <div className="text-center">
                 Already registered?{" "}
-                <span className="link-primary">
+                <span className="link-primary" onClick={navigateToSignIn}>
                   Sign In
                 </span>
               </div>
