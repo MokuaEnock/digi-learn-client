@@ -35,7 +35,7 @@ function Signup(props){
                 <input
                   type="text"
                   className="form-control mt-1"
-                  placeholder="e.g Jane Doe"
+                  placeholder="Your First Name"
                   name="firstname"
                   value={state.firstname}
                   onChange={handleChange}
@@ -47,7 +47,7 @@ function Signup(props){
                 <input
                   type="text"
                   className="form-control mt-1"
-                  placeholder="e.g Jane Doe"
+                  placeholder="Your Last Name"
                   name="lastname"
                   value={state.lastname}
                   onChange={handleChange}
