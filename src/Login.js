@@ -1,5 +1,6 @@
 
 import React, { useState } from "react"
+import { useNavigate } from 'react-router-dom'
 // first install bootstrap
 // npm install -save bootstrap
 // then install react dom
@@ -23,7 +24,11 @@ function Login(props) {
 
   };
   
-
+  // navigate to sign up form
+  const navigate = useNavigate()
+  const navigateToSignUp = () => {
+    navigate('/signup');
+  };
     return (
       <div className="Auth-form-container">
         <form className="Auth-form" onSubmit={handleSubmit}>
@@ -31,7 +36,7 @@ function Login(props) {
             <h3 className="Auth-form-title">Sign In</h3>
             <div className="text-center">
               Not registered yet?{" "}
-              <span className="link-primary">
+              <span className="link-primary" onClick={navigateToSignUp}>
                 Sign Up
               </span>
             </div>
