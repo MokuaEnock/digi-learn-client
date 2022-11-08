@@ -22,8 +22,8 @@ function Login(props) {
     event.preventDefault();
     console.log(state);
   };
-
-// switch between sign in and sign up
+  
+  // switch between sign in and sign up
   let [authMode, setAuthMode] = useState("signin")
 
   const changeAuthMode = () => {
@@ -51,6 +51,7 @@ function Login(props) {
                 name="email"
                 value={state.email}
                 onChange={handleChange}
+                required
               />
             </div>
             <div className="form-group mt-3">
@@ -62,6 +63,7 @@ function Login(props) {
                 name="password"
                 value={state.password}
                 onChange={handleChange}
+                required
               />
             </div>
             <div className="d-grid gap-2 mt-3">
@@ -95,14 +97,16 @@ function Login(props) {
               type="text"
               className="form-control mt-1"
               placeholder="e.g Jane Doe"
+              required
             />
           </div>
           <div className="form-group mt-3">
             <label>Email address</label>
-            <input
+            <input 
               type="email"
               className="form-control mt-1"
               placeholder="Email Address"
+              required
             />
           </div>
           <div className="form-group mt-3">
@@ -111,6 +115,7 @@ function Login(props) {
               type="password"
               className="form-control mt-1"
               placeholder="Password"
+              required
             />
           </div>
           <div className="d-grid gap-2 mt-3">
