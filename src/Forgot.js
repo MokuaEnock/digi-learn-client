@@ -7,6 +7,10 @@ function Forgot(){
   const navigateToSignIn = () =>{
     navigate("/login")
   }
+  // navigation to sign up    
+  const navigateToSignUp = () => {
+    navigate('/signup');
+  };  
   //form input controls
   const [state, setState] = useState({
     email: ""
@@ -31,7 +35,7 @@ function Forgot(){
             <h3 className="Auth-form-title">Reset Password</h3>
             <div className="text-center">
               Not registered yet?{" "}
-              <span className="link-primary" onClick={navigateToSignIn}>
+              <span className="link-primary" onClick={navigateToSignUp}>
                 Sign Up
               </span>
             </div>

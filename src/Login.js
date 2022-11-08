@@ -29,6 +29,10 @@ function Login(props) {
   const navigateToSignUp = () => {
     navigate('/signup');
   };
+  // navigation toreset password
+  const navigateToResetPassword = () => {
+    navigate("/resetpassword")
+  }  
     return (
       <div className="Auth-form-container">
         <form className="Auth-form" onSubmit={handleSubmit}>
@@ -69,9 +73,12 @@ function Login(props) {
                 Sign In
               </button>
             </div>
-            <p className="text-center mt-2">
-              Forgot <a href="#">password?</a>
-            </p>
+            <div className="text-center">
+                Forgot Password?{" "}
+                <span className="link-primary" onClick={navigateToResetPassword}>
+                  Reset Password
+                </span>
+              </div>
           </div>
         </form>
       </div>
