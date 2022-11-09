@@ -1,6 +1,95 @@
-body{
-  background-color: rgb(249, 237, 216);
+@import url('https://fonts.googleapis.com/css2?family=Prompt&display=swap');
+
+* {
+  font-family: 'Prompt', sans-serif;
 }
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+
+}
+
+#root {
+  width: 95%;
+}
+
+#root>* {
+  margin-bottom: .5vw;
+}
+
+
+/* Navigation bar ========================================================== */
+
+.navbar {
+  background-color: rgba(6, 106, 188, 0);
+  width: 100%;
+  height: 5vw;
+  font-size: 1.8vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: .3vw solid grey;
+}
+
+.navbar>a {
+  text-decoration: none;
+  color: black;
+}
+
+.navbar>a:hover {
+  color: black;
+  text-decoration: overline;
+
+}
+
+.navbar>span {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: 3vw;
+  font-weight: 800;
+  letter-spacing: .3vw;
+}
+
+.navbar>button {
+  width: 14%;
+  height: 80%;
+  color: white;
+  border: thin solid transparent;
+  background-color: #FF033E;
+  border-top-right-radius: 2vw;
+  border-bottom-left-radius: 2vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.navbar>button>a {
+  color: white;
+  font-size: 2vw;
+  letter-spacing: .2vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.navbar>button>a :hover {
+  text-decoration: none;
+}
+
+body {
+  background-color: #f9edd8;
+}
+
 .Auth-form-container {
   display: flex;
   justify-content: center;
@@ -39,7 +128,7 @@ label {
 }
 
 
-.homeparent{
+.homeparent {
   margin: auto;
   width: 80%;
   padding-top: 60px;
@@ -49,63 +138,474 @@ label {
   justify-content: space-between;
 }
 
-.homeparent h1{
-  
-  font-size:60px;
+.homeparent h1 {
+
+  font-size: 60px;
   font-family: 'Poppins', sans-serif;
 
 }
 
-.navbar{
-  background-color: rgba(6, 106, 188, 0);
-  border-bottom: ridge;
-  margin: auto;
-  width: 90%;
-  
-}
-
-.navbar a{
-  padding:30px;
-  text-decoration: none;
-  color: black;
-  font-size: 20px;
-  text-align: center;
-  font-weight: 600;
-  align-items: center;
-}
-.navbar h2{
-  color: black;
-  font-weight: 600;
-}
-
-button{
+/* button {
   background: rgb(241, 24, 104);
   border-radius: 5px 25px;
   margin-right: 10px;
   height: 70px;
 
-}
+} */
 
 .page {
-    display: flex;
-    flex-direction:row;
-    justify-content: space-between;
-  
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
 }
-.page img{
+
+.page img {
   height: 500px;
   width: 500px;
   border-radius: 5px 90px;
 
 }
-.page ul{
+
+.page ul {
   list-style: none;
   justify-content: space-between;
   /* display: flex; */
   padding: 30px;
 }
-.page ul li{
+
+.page ul li {
   display: flex;
   display: inline;
   padding: 14px;
 }
+
+
+
+/* Lecturer ============================================================ */
+#lecturer {
+  border: thin solid black;
+  width: 100%;
+  height: 55.3vw;
+  margin-bottom: 1vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+#lecturer>* {
+  border: thin solid black;
+}
+
+#lecturer>aside {
+  width: 25%;
+  height: 100%;
+
+}
+
+#lecturer>section {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* courses */
+#courses {
+  width: 100%;
+  height: 50%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.course_item,
+.student_item {
+  box-shadow: .1vw .1vw .5vw grey;
+}
+
+#courses>.title {
+  width: 100%;
+  height: 15%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#courses>.title>span {
+  margin-left: .5vw;
+  font-size: 3vw;
+  font-weight: 700;
+  letter-spacing: .2vw;
+}
+
+
+#courses>.title>form {
+  text-align: center;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 40%;
+  height: 90%;
+  font-size: 1.5vw;
+  border: #FF033E .2vw solid;
+}
+
+#courses>.title>form>input {
+  width: 70%;
+  height: 100%;
+  border: #FF033E .2vw solid;
+  text-align: center;
+
+}
+
+input:focus {
+  outline: none;
+}
+
+#courses>.title>form>button {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  border: none;
+  background-color: #FF033E;
+  color: white;
+
+}
+
+#courses>.course_list {
+  width: 100%;
+  height: 85%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: white;
+
+}
+
+.course_item {
+  width: 95%;
+  height: 25%;
+
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-between;
+  background-color: #f9edd8;
+}
+
+
+.course_item>img {
+  width: 15%;
+  height: 100%;
+  font-size: 1.5vw;
+}
+
+.course_item>span {
+  height: 100%;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.course_item>span>span {
+  width: 100%;
+  height: 50%;
+  font-size: 1.8vw;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+}
+
+.course_item>span>.pppp {
+  font-size: 1.5vw;
+}
+
+
+.course_item>button {
+  font-size: 1.5vw;
+  width: 15%;
+  height: 55%;
+  border: none;
+  background-color: #FF033E;
+  color: white;
+  font-size: 1.7vw;
+  letter-spacing: .2vw;
+  border-bottom-left-radius: 1vw;
+  border-top-right-radius: 1vw;
+
+}
+
+#courses>.course_list>.view_button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: 1.7vw;
+  font-weight: bold;
+  letter-spacing: .2vw;
+  border-radius: 2vw;
+  width: 25%;
+  height: 15%;
+  border: thin solid transparent;
+  background-color: #FF033E;
+  color: white;
+}
+
+/* students */
+
+#students {
+  width: 100%;
+  height: 50%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+#students>.title {
+  width: 100%;
+  height: 15%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#students>.title>span {
+  margin-left: .5vw;
+  font-size: 3vw;
+  font-weight: 700;
+  letter-spacing: .2vw;
+}
+
+#students>.title>form {
+  text-align: center;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 40%;
+  height: 90%;
+  font-size: 1.5vw;
+  border: #FF033E .2vw solid;
+}
+
+#students>.title>form>input {
+  width: 70%;
+  height: 100%;
+  border: #FF033E .2vw solid;
+  text-align: center;
+}
+
+input:focus {
+  outline: none;
+}
+
+#students>.title>form>button {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  border: none;
+  background-color: #FF033E;
+  color: white;
+
+}
+
+#students>.student_list {
+  width: 100%;
+  height: 85%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: white;
+}
+
+
+.student_item {
+  width: 95%;
+  height: 25%;
+
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-between;
+  background-color: #f9edd8;
+}
+
+
+.student_item>img {
+  width: 15%;
+  height: 100%;
+  font-size: 1.5vw;
+}
+
+.student_item>span {
+  height: 100%;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.student_item>span>span {
+  width: 100%;
+  height: 50%;
+  font-size: 1.8vw;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+}
+
+.student_item>span>.pppp {
+  font-size: 1.5vw;
+}
+
+
+.student_item>button {
+  font-size: 1.5vw;
+  width: 15%;
+  height: 55%;
+  border: none;
+  background-color: #FF033E;
+  color: white;
+  font-size: 1.7vw;
+  letter-spacing: .2vw;
+  border-bottom-left-radius: 1vw;
+  border-top-right-radius: 1vw;
+
+}
+
+#students>.student_list>.view_button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: 1.7vw;
+  font-weight: bold;
+  letter-spacing: .2vw;
+  border-radius: 2vw;
+  width: 25%;
+  height: 15%;
+  border: thin solid transparent;
+  background-color: #FF033E;
+  color: white;
+}
+
+/* Aside  Lecturer======================================= */
+
+#main_lecturer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 1.5vw;
+}
+
+#main_lecturer>* {
+  margin-bottom: 1.5vw;
+}
+
+#main_lecturer>span {
+  width: 90%;
+  height: 7%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 2%;
+  background-color: white;
+  box-shadow: .1vw .1vw .5vw grey;
+  font-size: 1.7vw;
+  font-weight: 200;
+
+}
+
+#main_lecturer>img {
+  width: 50%;
+  height: 22%;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#main_student {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 1.5vw;
+}
+
+#main_student>* {
+  margin-bottom: 1.5vw;
+}
+
+#main_student>span {
+  width: 90%;
+  height: 7%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 2%;
+  background-color: white;
+  box-shadow: .1vw .1vw .5vw grey;
+  font-size: 1.7vw;
+  font-weight: 200;
+
+}
+
+#main_student>img {
+  width: 50%;
+  height: 22%;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* #lecturer_name {}
+
+#lecturer_course {}
+
+#student_number {}
+
+#date_joined {}
+
+#average_grade {} */
