@@ -5,15 +5,21 @@ export default function Lecturer() {
     <main id="lecturer">
       <aside></aside>
       <section>
-        <span>
+        {/* <span>
           <span>Courses</span>
           <form>
             <input type="text" placeholder="Search ..." />
             <button type="submit">Search</button>
           </form>
         </span>
-        <ul></ul>
+        <ul>
+          <li id="course_item"></li>
+          <li id="course_item"></li>
+          <li id="course_item"></li>
+        </ul>
+
         <button>View All</button>
+
         <span>
           <span>Students</span>
           <form>
@@ -21,8 +27,13 @@ export default function Lecturer() {
             <button type="submit">Search</button>
           </form>
         </span>
-        <ul></ul>
-        <button>View All</button>
+        <ul>
+        <li id="course_item"></li>
+        <li id="course_item"></li>
+        <li id="course_item"></li>
+
+        </ul>
+        <button>View All</button> */}
       </section>
       <aside></aside>
     </main>
