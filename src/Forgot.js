@@ -1,15 +1,19 @@
-
-import React, { useState } from "react"
 import { useNavigate } from 'react-router-dom'
-// first install bootstrap
-// npm install -save bootstrap
-// then install react dom
-// npm install --save react-router-dom
-function Login(props) {
-  // form input controls
+import React, { useState } from "react"
+
+function Forgot(){
+  // navigation to sign in
+  const navigate = useNavigate();
+  const navigateToSignIn = () =>{
+    navigate("/login")
+  }
+  // navigation to sign up    
+  const navigateToSignUp = () => {
+    navigate('/signup');
+  };  
+  //form input controls
   const [state, setState] = useState({
-    email: "",
-    password: ""
+    email: ""
   });
   const handleChange = (event) => {
     setState((prevProps) => ({
@@ -23,21 +27,12 @@ function Login(props) {
     console.log(state);
 
   };
-  
-  // navigate to sign up form
-  const navigate = useNavigate()
-  const navigateToSignUp = () => {
-    navigate('/signup');
-  };
-  // navigation toreset password
-  const navigateToResetPassword = () => {
-    navigate("/resetpassword")
-  }  
-    return (
-      <div className="Auth-form-container">
+     
+  return (
+    <div className="Auth-form-container">
         <form className="Auth-form" onSubmit={handleSubmit}>
           <div className="Auth-form-content">
-            <h3 className="Auth-form-title">Sign In</h3>
+            <h3 className="Auth-form-title">Reset Password</h3>
             <div className="text-center">
               Not registered yet?{" "}
               <span className="link-primary" onClick={navigateToSignUp}>
@@ -56,33 +51,23 @@ function Login(props) {
                 required
               />
             </div>
-            <div className="form-group mt-3">
-              <label>Password</label>
-              <input
-                type="password"
-                className="form-control mt-1"
-                placeholder="Enter password"
-                name="password"
-                value={state.password}
-                onChange={handleChange}
-                required
-              />
-            </div>
             <div className="d-grid gap-2 mt-3">
               <button type="submit" className="btn btn-primary">
-                Sign In
+                Reset Password
               </button>
             </div>
             <div className="text-center">
-                Forgot Password?{" "}
-                <span className="link-primary" onClick={navigateToResetPassword}>
-                  Reset Password
-                </span>
-              </div>
+              Have An Account?{" "}
+              <span className="link-primary" onClick={navigateToSignIn}>
+                Sign In
+              </span>
+            </div>
           </div>
         </form>
       </div>
-    )
+  )
 
 }
-export default Login
+
+
+export default Forgot
