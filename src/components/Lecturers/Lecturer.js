@@ -5,35 +5,16 @@ export default function Lecturer() {
     <main id="lecturer">
       <aside></aside>
       <section>
-        {/* <span>
-          <span>Courses</span>
-          <form>
-            <input type="text" placeholder="Search ..." />
-            <button type="submit">Search</button>
-          </form>
-        </span>
-        <ul>
-          <li id="course_item"></li>
-          <li id="course_item"></li>
-          <li id="course_item"></li>
-        </ul>
+        {/* courses */}
+        <div id="courses">
+          <span className="title"></span>
+          <div className="course_list">
+            <button className="view_button">View All</button>
+          </div>
+        </div>
 
-        <button>View All</button>
-
-        <span>
-          <span>Students</span>
-          <form>
-            <input type="text" placeholder="Search ..." />
-            <button type="submit">Search</button>
-          </form>
-        </span>
-        <ul>
-        <li id="course_item"></li>
-        <li id="course_item"></li>
-        <li id="course_item"></li>
-
-        </ul>
-        <button>View All</button> */}
+        {/* students */}
+        <div id="students"></div>
       </section>
       <aside></aside>
     </main>
