@@ -32,8 +32,7 @@ function Home(){
                 <div id="column_li">100 +
                     <p>Ready Students</p>
                 </div>
-
-            </div>
+                </div>
    
 
     </>)
