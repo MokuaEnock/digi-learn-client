@@ -23,7 +23,21 @@ export default function Lecturer() {
         </div>
 
         {/* students */}
-        <div id="students"></div>
+        <div id="students">
+          <span className="title">
+            <span>Courses</span>
+            <form>
+              <button type="submit">Search</button>
+              <input type="" required />
+            </form>
+          </span>
+          <div className="student_list">
+            <span className="student_item"></span>
+            <span className="student_item"></span>
+            <span className="student_item"></span>
+            <button className="view_button">View All</button>
+          </div>
+        </div>
       </section>
       <aside></aside>
     </main>
