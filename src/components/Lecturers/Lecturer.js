@@ -7,8 +7,17 @@ export default function Lecturer() {
       <section>
         {/* courses */}
         <div id="courses">
-          <span className="title"></span>
+          <span className="title">
+            <span>Courses</span>
+            <form>
+              <button type="submit">Search</button>
+              <input type="" required />
+            </form>
+          </span>
           <div className="course_list">
+            <span className="course_item"></span>
+            <span className="course_item"></span>
+            <span className="course_item"></span>
             <button className="view_button">View All</button>
           </div>
         </div>

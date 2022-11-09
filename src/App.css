@@ -215,7 +215,60 @@ label {
 #courses>.title {
   width: 100%;
   height: 15%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 }
+
+#courses>.title>span {
+  margin-left: .5vw;
+  font-size: 3vw;
+  font-weight: 700;
+  letter-spacing: .2vw;
+}
+
+
+#courses>.title>form {
+  text-align: center;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 40%;
+  height: 90%;
+  font-size: 1.5vw;
+  border: #FF033E .2vw solid;
+}
+
+#courses>.title>form>input {
+  width: 70%;
+  height: 100%;
+  border: #FF033E .2vw solid;
+  text-align: center;
+
+
+}
+
+input:focus {
+  outline: none;
+}
+
+#courses>.title>form>button {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  border: none;
+  background-color: #FF033E;
+  color: white;
+
+}
+
+
 
 #courses>.course_list {
   width: 100%;
@@ -224,6 +277,12 @@ label {
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
+}
+
+.course_item {
+  width: 95%;
+  height: 25%;
+  border: thin solid black;
 }
 
 #courses>.course_list>.view_button {
