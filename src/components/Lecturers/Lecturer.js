@@ -1,6 +1,34 @@
 import React from "react";
 
 export default function Lecturer() {
+  function Student() {
+    return (
+      <span className="course_item">
+        <img src="#" alt="course" />
+        <span>
+          <span></span>
+          <span className="pppp">
+          </span>
+        </span>
+        <button>View</button>
+      </span>
+    );
+  }
+
+  function Course() {
+    return (
+      <span className="course_item">
+        <img src="#" alt="course" />
+        <span>
+          <span></span>
+          <span className="pppp">
+          </span>
+        </span>
+        <button>View</button>
+      </span>
+    );
+  }
+
   return (
     <main id="lecturer">
       <aside></aside>
@@ -15,18 +43,7 @@ export default function Lecturer() {
             </form>
           </span>
           <div className="course_list">
-            <span className="course_item">
-              <img src="#" alt="course" />
-              <span>
-                <span>jwjhhh jejejej jejejej</span>
-                <span className="pppp">
-                  wefjlwfbb ehehhe ejejejejje ejejejej ejejejjej
-                </span>
-              </span>
-              <button>View</button>
-            </span>
-            <span className="course_item"></span>
-            <span className="course_item"></span>
+            <Course />
             <button className="view_button">View All</button>
           </div>
         </div>
@@ -41,18 +58,7 @@ export default function Lecturer() {
             </form>
           </span>
           <div className="student_list">
-            <span className="course_item">
-              <img src="#" alt="course" />
-              <span>
-                <span>jwjhhh jejejej jejejej</span>
-                <span className="pppp">
-                  wefjlwfbb ehehhe ejejejejje ejejejej ejejejjej
-                </span>
-              </span>
-              <button>View</button>
-            </span>
-            <span className="student_item"></span>
-            <span className="student_item"></span>
+            <Student />
             <button className="view_button">View All</button>
           </div>
         </div>
