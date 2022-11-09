@@ -3,10 +3,10 @@
 import "bootstrap/dist/css/bootstrap.min.css"
 import "./App.css"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
-import Login from "./Login"
-import Signup from "./Signup"
-import Forgot from "./Forgot"
-import Contact from "./Contact"
+import Login from "./components/Login"
+import Signup from "./components/Signup"
+import Forgot from "./components/Forgot"
+import Contact from "./components/Contact"
 
 
 function App() {
