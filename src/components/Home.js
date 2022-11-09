@@ -16,7 +16,7 @@ function Home(){
                         <li><span style={{color:"red"}}>&#x2611;</span>Beginner Friendly</li>
                     </ul>
                     <button >Get Started Now</button>
-                    <p><span style={{color:"red",fontSize:"bold"}}>&#8594;</span>Proving ypu with a course management<br></br>
+                    <p><span style={{color:"red",fontSize:"bold"}}>&#8594;</span>Proving you with a course management<br></br>
                     system to track your lectures and students</p>
                 </div>
        <img src={pic.url} alt="congrats"/>
