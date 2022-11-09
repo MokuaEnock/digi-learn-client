@@ -43,6 +43,7 @@ function Contact(props){
                   className="form-control mt-1"
                   placeholder="+254....."
                   name="phone"
+                  minLength={10}
                   value={state.phone}
                   onChange={handleChange}
                   required

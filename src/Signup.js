@@ -81,6 +81,7 @@ function Signup(props){
                   className="form-control mt-1"
                   placeholder="Password"
                   name="password"
+                  minLength={8}
                   value={state.password}
                   onChange={handleChange}
                   required

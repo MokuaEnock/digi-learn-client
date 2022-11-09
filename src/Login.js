@@ -63,6 +63,7 @@ function Login(props) {
                 className="form-control mt-1"
                 placeholder="Enter password"
                 name="password"
+                minLength={8}
                 value={state.password}
                 onChange={handleChange}
                 required
