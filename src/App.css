@@ -73,6 +73,12 @@ label {
   font-weight: 600;
   align-items: center;
 }
+.navbar a:hover{
+  color: rgb(241, 24, 104);
+  transition: 0.5s;
+  text-transform: capitalize;
+}
+
 .navbar h2{
   color: black;
   font-weight: 600;
@@ -84,6 +90,10 @@ button{
   margin-right: 10px;
   height: 70px;
 
+
+}
+button:hover{
+ background-color: black;
 }
 
 .page {
