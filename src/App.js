@@ -2,9 +2,11 @@
 import "bootstrap/dist/css/bootstrap.min.css"
 import "./App.css"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
-import Login from "./Login"
-import Home from "./Home"
-import NavBar from "./Navbar"
+
+import Home from "./components/Home"
+import Login from "./components/Login"
+import NavBar from "./components/Navbar"
+
 
 function App() {
   return (
@@ -12,11 +14,10 @@ function App() {
     <NavBar/>
       <Routes>
         <Route path="/login" element={<Login />} />
-        </Routes>
+        </Routes >
         <Routes>
         <Route path="/" element={<Home />} />
         </Routes>
-    
     </BrowserRouter>
   )
 }
