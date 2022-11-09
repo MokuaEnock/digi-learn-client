@@ -3,7 +3,7 @@ import "./about.css";
 // import img from "../img/aboutcard-image.jpg"
 // import Back from "../header/Back";
 import Heading from "../header/Heading";
-import Awrapper from "..App//Awrapper";
+import Awrapper from "../about/Awrapper";
 
 function About() {
   return (
