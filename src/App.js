@@ -1,3 +1,4 @@
+
 import "bootstrap/dist/css/bootstrap.min.css"
 import "./App.css"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
@@ -6,22 +7,24 @@ import Signup from "./components/Signup"
 import Forgot from "./components/Forgot"
 import NavBar from "./components/Navbar"
 import Home from "./components/Home"
-import Contact from "./Contact"
+import Contact from "./components/Contact"
+import Lecturer from "./components/Lecturers/Lecturer";
+
 
 function App() {
   return (
     
     <BrowserRouter>
-    <NavBar/>
+      <NavBar />
       <Routes>
         <Route path="/login" element={<Login />} />
         <Route path="/" element={<Home />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/resetpassword" element={<Forgot />} />
         <Route path="/contactus" element={<Contact />} />
+        <Route path="/lecturer" element={<Lecturer />} />
       </Routes>
-    </BrowserRouter>
-  )
-}
+    </BrowserRouter>)}
 
-export default App
+  
+export default App;

@@ -1,19 +1,21 @@
-import React from 'react'
-import {NavLink} from "react-router-dom"
+import React from "react";
+import { NavLink } from "react-router-dom";
 
 function NavBar() {
   return (
-    <div className='navbar'>
-      <h2>Digi Learn</h2>
-        <NavLink to="/" >Home</NavLink>
-        <NavLink to="/lectures">Lecturers</NavLink>
-        <NavLink to="/students">Students</NavLink>
-        <NavLink to="/about">About us</NavLink>
-        <NavLink to="/contactus">Contact</NavLink>
-        <button><NavLink to="/login">Login</NavLink></button>
-        
-    </div>
-  )
+    <header className="navbar">
+      <span>Digi Learn</span>
+      <NavLink to="/">Home</NavLink>
+      <NavLink to="/about">About</NavLink>
+      <NavLink to="/lecturer">Lecturers</NavLink>
+      <NavLink to="/student">Students</NavLink>
+      <NavLink to="/contactus">Contact</NavLink>
+
+      <button>
+        <NavLink to="/login">Login</NavLink>
+      </button>
+    </header>
+  );
 }
 
-export default NavBar
+export default NavBar;
