@@ -1,7 +1,9 @@
-
 import React, { useState } from "react"
-
-function Auth(props) {
+// first install bootstrap
+// npm install -save bootstrap
+// then install react dom
+// npm install --save react-router-dom
+function Login(props) {
   let [authMode, setAuthMode] = useState("signin")
 
   const changeAuthMode = () => {
@@ -37,7 +39,7 @@ function Auth(props) {
               />
             </div>
             <div className="d-grid gap-2 mt-3">
-              <button type="submit" className="btn btn-primary">
+              <button type="submit" className="btn btn-danger">
                 Submit
               </button>
             </div>
@@ -86,7 +88,7 @@ function Auth(props) {
             />
           </div>
           <div className="d-grid gap-2 mt-3">
-            <button type="submit" className="btn btn-primary">
+            <button type="submit" className="btn btn-danger">
               Submit
             </button>
           </div>
@@ -98,4 +100,4 @@ function Auth(props) {
     </div>
   )
 }
-export default Auth
+export default Login

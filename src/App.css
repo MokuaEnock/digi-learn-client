@@ -1,6 +1,5 @@
 body{
   background-color: rgb(249, 237, 216);
-  /* width: 80%; */
 }
 .Auth-form-container {
   display: flex;
@@ -44,23 +43,15 @@ label {
   margin: auto;
   width: 80%;
   padding-top: 60px;
-  width: 80%;
+  width: 90%;
   /* display: flex; */
   text-align: center;
   justify-content: space-between;
 }
 
-.homeparent img{
-  
-  width: 50%;
-  height: 60%;
-  float: left;
-  padding-top: 40px;
-  
-}
 .homeparent h1{
   
-  font-size:80px;
+  font-size:60px;
   font-family: 'Poppins', sans-serif;
 
 }
@@ -69,7 +60,7 @@ label {
   background-color: rgba(6, 106, 188, 0);
   border-bottom: ridge;
   margin: auto;
-  width: 80%;
+  width: 90%;
   
 }
 
@@ -82,9 +73,39 @@ label {
   font-weight: 600;
   align-items: center;
 }
+.navbar h2{
+  color: black;
+  font-weight: 600;
+}
 
 button{
-  background: rgb(255, 0, 111);
-  border-radius: 5px ;
+  background: rgb(241, 24, 104);
+  border-radius: 5px 25px;
   margin-right: 10px;
+  height: 70px;
+
+}
+
+.page {
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+  
+}
+.page img{
+  height: 500px;
+  width: 500px;
+  border-radius: 5px 90px;
+
+}
+.page ul{
+  list-style: none;
+  justify-content: space-between;
+  /* display: flex; */
+  padding: 30px;
+}
+.page ul li{
+  display: flex;
+  display: inline;
+  padding: 14px;
 }
