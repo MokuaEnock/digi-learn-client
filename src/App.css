@@ -4,6 +4,22 @@
   font-family: 'Prompt', sans-serif;
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+
+}
+
+#root {
+  width: 95%;
+}
+
+#root>* {
+  margin-bottom: .5vw;
+}
+
 
 /* Navigation bar ========================================================== */
 
@@ -505,3 +521,55 @@ input:focus {
   background-color: #FF033E;
   color: white;
 }
+
+/* Aside  Lecturer======================================= */
+
+#main_lecturer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 1.5vw;
+}
+
+#main_lecturer>* {
+  margin-bottom: 1.5vw;
+}
+
+#main_lecturer>span {
+  width: 90%;
+  height: 7%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 2%;
+  background-color: white;
+  box-shadow: .1vw .1vw .5vw grey;
+  font-size: 1.7vw;
+  font-weight: 200;
+
+}
+
+#main_lecturer>img {
+  width: 50%;
+  height: 22%;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#main_student{}
+
+/* #lecturer_name {}
+
+#lecturer_course {}
+
+#student_number {}
+
+#date_joined {}
+
+#average_grade {} */

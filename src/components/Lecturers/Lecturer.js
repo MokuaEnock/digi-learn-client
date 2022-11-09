@@ -7,8 +7,7 @@ export default function Lecturer() {
         <img src="#" alt="course" />
         <span>
           <span></span>
-          <span className="pppp">
-          </span>
+          <span className="pppp"></span>
         </span>
         <button>View</button>
       </span>
@@ -21,8 +20,7 @@ export default function Lecturer() {
         <img src="#" alt="course" />
         <span>
           <span></span>
-          <span className="pppp">
-          </span>
+          <span className="pppp"></span>
         </span>
         <button>View</button>
       </span>
@@ -31,7 +29,16 @@ export default function Lecturer() {
 
   return (
     <main id="lecturer">
-      <aside></aside>
+      <aside id="main_lecturer">
+        <span id="lecturer_name">Enock Mokua</span>
+        <img src="#" alt="lecturer" />
+        <span id="lecturer_course">Machine Learning</span>
+        <span id="student_number">Students: 117</span>
+        <span id="average_grade">Average grade: 78</span>
+        <span id="date_joined">Date Joined: 08/12/2012</span>
+        <span></span>
+      </aside>
+
       <section>
         {/* courses */}
         <div id="courses">
@@ -63,7 +70,15 @@ export default function Lecturer() {
           </div>
         </div>
       </section>
-      <aside></aside>
+
+      <aside id="main_student">
+        <span id="lecturer_name">Enock Mokua</span>
+        <img src="#" alt="lecturer" />
+        <span id="lecturer_course">Machine Learning</span>
+        <span id="student_number">Students: 117</span>
+        <span id="average_grade">Average grade: 78</span>
+        <span id="date_joined">Date Joined: 08/12/2012</span>
+      </aside>
     </main>
   );
 }
