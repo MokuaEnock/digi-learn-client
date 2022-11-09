@@ -41,7 +41,16 @@ export default function Lecturer() {
             </form>
           </span>
           <div className="student_list">
-            <span className="student_item"></span>
+            <span className="course_item">
+              <img src="#" alt="course" />
+              <span>
+                <span>jwjhhh jejejej jejejej</span>
+                <span className="pppp">
+                  wefjlwfbb ehehhe ejejejejje ejejejej ejejejjej
+                </span>
+              </span>
+              <button>View</button>
+            </span>
             <span className="student_item"></span>
             <span className="student_item"></span>
             <button className="view_button">View All</button>
