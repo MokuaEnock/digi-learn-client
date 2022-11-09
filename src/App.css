@@ -562,7 +562,43 @@ input:focus {
   justify-content: center;
 }
 
-#main_student{}
+#main_student {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 1.5vw;
+}
+
+#main_student>* {
+  margin-bottom: 1.5vw;
+}
+
+#main_student>span {
+  width: 90%;
+  height: 7%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 2%;
+  background-color: white;
+  box-shadow: .1vw .1vw .5vw grey;
+  font-size: 1.7vw;
+  font-weight: 200;
+
+}
+
+#main_student>img {
+  width: 50%;
+  height: 22%;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 
 /* #lecturer_name {}
 

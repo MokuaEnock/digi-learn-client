@@ -77,6 +77,8 @@ export default function Lecturer() {
         <span id="lecturer_course">Machine Learning</span>
         <span id="student_number">Students: 117</span>
         <span id="average_grade">Average grade: 78</span>
+        <span> Rank: 17</span>
+
         <span id="date_joined">Date Joined: 08/12/2012</span>
       </aside>
     </main>
