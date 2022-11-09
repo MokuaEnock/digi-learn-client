@@ -10,8 +10,6 @@ function NavBar() {
         <NavLink to="/students">Students</NavLink>
         <NavLink to="/about">About us</NavLink>
         <NavLink to="/contactus">Contact</NavLink>
-        
-        
         <button><NavLink to="/login">Login</NavLink></button>
         
     </div>
