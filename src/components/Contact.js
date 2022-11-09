@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { useNavigate } from "react-router-dom";
+//import { useNavigate } from "react-router-dom";
 function Contact(props){
     // form input controls
   const [state, setState] = useState({

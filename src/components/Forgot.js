@@ -35,7 +35,7 @@ function Forgot(){
             <h3 className="Auth-form-title">Reset Password</h3>
             <div className="text-center">
               Not registered yet?{" "}
-              <span className="link-primary" onClick={navigateToSignUp}>
+              <span className="link-danger" onClick={navigateToSignUp}>
                 Sign Up
               </span>
             </div>
@@ -58,7 +58,7 @@ function Forgot(){
             </div>
             <div className="text-center">
               Have An Account?{" "}
-              <span className="link-primary" onClick={navigateToSignIn}>
+              <span className="link-danger" onClick={navigateToSignIn}>
                 Sign In
               </span>
             </div>
