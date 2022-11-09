@@ -10,10 +10,9 @@ function NavBar() {
       <NavLink to="/lecturer">Lecturers</NavLink>
       <NavLink to="/student">Students</NavLink>
       <NavLink to="/contactus">Contact</NavLink>
-
-      <button>
+   <button>
         <NavLink to="/login">Login</NavLink>
-      </button>
+   </button>
     </header>
   );
 }
