@@ -6,6 +6,7 @@ import Signup from "./components/Signup"
 import Forgot from "./components/Forgot"
 import NavBar from "./components/Navbar"
 import Home from "./components/Home"
+import Contact from "./Contact"
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/resetpassword" element={<Forgot />} />
+        <Route path="/contactus" element={<Contact />} />
       </Routes>
     </BrowserRouter>
   )
