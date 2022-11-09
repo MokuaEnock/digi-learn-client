@@ -15,7 +15,16 @@ export default function Lecturer() {
             </form>
           </span>
           <div className="course_list">
-            <span className="course_item"></span>
+            <span className="course_item">
+              <img src="#" alt="course" />
+              <span>
+                <span>jwjhhh jejejej jejejej</span>
+                <span className="pppp">
+                  wefjlwfbb ehehhe ejejejejje ejejejej ejejejjej
+                </span>
+              </span>
+              <button>View</button>
+            </span>
             <span className="course_item"></span>
             <span className="course_item"></span>
             <button className="view_button">View All</button>
@@ -25,7 +34,7 @@ export default function Lecturer() {
         {/* students */}
         <div id="students">
           <span className="title">
-            <span>Courses</span>
+            <span>Students</span>
             <form>
               <button type="submit">Search</button>
               <input type="" required />

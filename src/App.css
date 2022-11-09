@@ -71,7 +71,7 @@
 }
 
 body {
-  background-color: rgb(249, 237, 216);
+  background-color: #f9edd8;
 }
 
 .Auth-form-container {
@@ -248,7 +248,6 @@ label {
   border: #FF033E .2vw solid;
   text-align: center;
 
-
 }
 
 input:focus {
@@ -268,8 +267,6 @@ input:focus {
 
 }
 
-
-
 #courses>.course_list {
   width: 100%;
   height: 85%;
@@ -277,13 +274,72 @@ input:focus {
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
+  background-color: white;
+
 }
 
 .course_item {
   width: 95%;
   height: 25%;
   border: thin solid black;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-between;
+  background-color: #f9edd8;
 }
+
+.course_item>* {
+  border: thin solid black;
+}
+
+.course_item>img {
+  width: 15%;
+  height: 100%;
+  font-size: 1.5vw;
+}
+
+.course_item>span {
+  height: 100%;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.course_item>span>span {
+  width: 100%;
+  height: 50%;
+  font-size: 1.8vw;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border: thin solid black;
+  overflow: hidden;
+}
+
+.course_item>span>.pppp {
+  font-size: 1.5vw;
+}
+
+
+.course_item>button {
+  font-size: 1.5vw;
+  width: 15%;
+  height: 55%;
+  border: none;
+  background-color: #FF033E;
+  color: white;
+  font-size: 1.7vw;
+  letter-spacing: .2vw;
+  border-bottom-left-radius: 1vw;
+  border-top-right-radius: 1vw;
+
+}
+
 
 #courses>.course_list>.view_button {
   display: flex;
@@ -386,6 +442,7 @@ input:focus {
   width: 95%;
   height: 25%;
   border: thin solid black;
+  background-color: white;
 }
 
 #students>.student_list>.view_button {
