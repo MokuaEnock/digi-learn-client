@@ -109,3 +109,8 @@ button{
   display: inline;
   padding: 14px;
 }
+.centre p{
+  padding-top: 40px;
+  font-size: 30px;
+  font-weight: 500;
+}
