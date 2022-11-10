@@ -11,18 +11,46 @@ function Login(props) {
     email: "",
     password: ""
   });
-  const handleChange = (event) => {
-    setState((prevProps) => ({
-      ...prevProps,
-      [event.target.name]: event.target.value
-    }));
-  };
+  const userdetails = props.userdetails;
+  const setUserdetails = props.setUserdetails;
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    console.log(state);
+  // const handleChange = (event) => {
+  //   setState((prevProps) => ({
+  //     ...prevProps,
+  //     [event.target.name]: event.target.value
+  //   }));
+  // };
+  function handleSubmit(evt) {
+    evt.preventDefault();
+    fetch('', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json',
+      },
+      body: JSON.stringify(state)
+    })
+      .then(res => res.json())
+      .then(data => {
+        setUserdetails([
+          ...userdetails,
+          data
+        ]);
+      })
+  }
 
-  };
+  function handleChange(e) {
+    setState({
+      ...state,
+      [e.target.name]: e.target.value,
+    });
+  }
+
+  // const handleSubmit = (event) => {
+  //   event.preventDefault();
+  //   console.log(state);
+
+  // };
   
   // navigate to sign up form
   const navigate = useNavigate()

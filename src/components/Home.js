@@ -42,7 +42,6 @@ function Home() {
             </span>
           </div>
           <button onClick={navigateToSignUp}>Get Started Now</button>
-          <button>Get Started</button>
           <span id="span3">
             Providing you with a course management system to track your
             lecturers and students.
@@ -81,5 +80,4 @@ function Home() {
     </main>
   );
 }
-
 export default Home;

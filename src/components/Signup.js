@@ -8,6 +8,28 @@ function Signup(props){
     email: "",
     password: ""
   });
+  // post request to backend
+  const userdetails = props.userdetails;
+  const setUserdetails = props.setUserdetails;
+  function handleSubmit(evt) {
+    evt.preventDefault();
+    fetch('', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json',
+      },
+      body: JSON.stringify(state)
+    })
+      .then(res => res.json())
+      .then(data => {
+        setUserdetails([
+          ...userdetails,
+          data
+        ]);
+      })
+  }
+
   const handleChange = (event) => {
     setState((prevProps) => ({
       ...prevProps,
@@ -15,10 +37,10 @@ function Signup(props){
     }));
   };
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    console.log(state);
-  };
+  // const handleSubmit = (event) => {
+  //   event.preventDefault();
+  //   console.log(state);
+  // };
   // navigation to sign in
   const navigate = useNavigate();
   const navigateToSignIn = () =>{
