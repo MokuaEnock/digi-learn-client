@@ -94,7 +94,7 @@ body {
   background-color: #f9edd8;
 }
 
-/* Authrntication form ================================================= */
+/* Authentication form ================================================= */
 
 .Auth-form-container {
   display: flex;
@@ -189,7 +189,6 @@ label {
 }
 
 /* Landing page ========================================================= */
-
 
 .main_section1 {
   width: 100%;
