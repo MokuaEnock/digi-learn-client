@@ -92,7 +92,7 @@ export default function Lecturer() {
   //   };
   // });
 
-  console.log("course all data", courses);
+  // console.log("course all data", courses);
   console.log("course item", course);
 
   function Student() {
