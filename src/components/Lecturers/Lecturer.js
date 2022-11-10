@@ -1,6 +1,58 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 export default function Lecturer() {
+  /* usestate and useeffect */
+  let [lecturer, setLecturer] = useState([]);
+  let [user, setUser] = useState([]);
+  let [student, setStudent] = useState([]);
+
+  /* fetching data */
+  useEffect(() => {
+    fetch("http://localhost:7000/users")
+      .then((r) => r.json())
+      .then((r) => setUser(r));
+  }, []);
+
+  useEffect(() => {
+    fetch("http://localhost:7000/lecturers")
+      .then((r) => r.json())
+      .then((r) => setLecturer(r));
+  }, []);
+
+  useEffect(() => {
+    fetch("http://localhost:7000/students")
+      .then((r) => r.json())
+      .then((r) => setStudent(r));
+  }, []);
+
+  // console.log("user", user);
+  // console.log("lecturer", lecturer);
+  console.log("student", student);
+
+  let students = student.map((item, { user, lecturer }) => {
+    function studentName(user, item) {
+      if (user.id === item.id) {
+        return user.name;
+      }
+    }
+    let student_id = item.id;
+    let name = {};
+    return {
+      student_id: student_id,
+      name: "",
+      lecturer_id: "",
+      lecturer: "",
+      image: "",
+      grade: "",
+      cohort: "",
+      cohort_id: "",
+      date_joined: "",
+      course: "",
+      course_id: "",
+    };
+  });
+
+  console.log("student item", students);
   function Student() {
     return (
       <span className="course_item">
