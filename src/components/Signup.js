@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useHistory } from "react-router-dom";
 
 function Signup(props) {
   // form input controls
@@ -10,19 +10,9 @@ function Signup(props) {
     password: "",
   });
 
-  // post request to backend
-  const userdetails = props.userdetails;
-  const setUserdetails = props.setUserdetails;
-
+  /* fucntion to post data */
   function handleSubmit(e) {
     e.preventDefault();
-
-    console.log({
-      name: `${state.firstname} ${state.lastname}`,
-      email: state.email,
-      password: state.password,
-    });
-
     fetch("http://localhost:7000/users", {
       method: "POST",
       headers: {
@@ -39,9 +29,9 @@ function Signup(props) {
       .then((data) => {
         console.log(data);
       });
-    useNavigate("/login")
   }
 
+  /* function to handle change */
   const handleChange = (event) => {
     setState((prevProps) => ({
       ...prevProps,
@@ -49,12 +39,12 @@ function Signup(props) {
     }));
   };
 
-  // const handleSubmit = (event) => {
-  //   event.preventDefault();
-  //   console.log(state);
-  // };
-  // navigation to sign in
-  const navigate = useNavigate();
+  /* user navigations  */
+  let navigate = useNavigate();
+  let navigateStudent = () => {
+    navigate("/students");
+  };
+
   const navigateToSignIn = () => {
     navigate("/login");
   };
@@ -123,7 +113,11 @@ function Signup(props) {
             />
           </div>
           <div className="d-grid gap-2 mt-3">
-            <button type="submit" className="btn btn-danger">
+            <button
+              type="submit"
+              className="btn btn-danger"
+              onClick={navigateStudent}
+            >
               Sign Up
             </button>
           </div>
