@@ -3,8 +3,16 @@ import React from "react";
 import Image from "./img/image2.png";
 import Pic from "./img/image3.png";
 import Check from "./img/check-mark.png";
+import {useNavigate} from "react-router-dom"
+
 
 function Home() {
+
+  // navigate to sign up form
+  const navigate = useNavigate()
+  const navigateToSignUp = () => {
+    navigate('/signup');
+  };
   return (
     <main>
       <section className="main_section1">
@@ -33,6 +41,7 @@ function Home() {
               <p>Friendly</p>
             </span>
           </div>
+          <button onClick={navigateToSignUp}>Get Started Now</button>
           <button>Get Started</button>
           <span id="span3">
             Providing you with a course management system to track your
