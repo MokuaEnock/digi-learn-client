@@ -5,6 +5,8 @@ export default function Lecturer() {
   let [lecturer, setLecturer] = useState([]);
   let [user, setUser] = useState([]);
   let [student, setStudent] = useState([]);
+  let [course, setCourse] = useState([]);
+  let [cohort, setCohort] = useState([]);
 
   /* fetching data */
   useEffect(() => {
@@ -25,46 +27,73 @@ export default function Lecturer() {
       .then((r) => setStudent(r));
   }, []);
 
-  // console.log("user", user);
-  // console.log("lecturer", lecturer);
-  console.log("student", student);
+  useEffect(() => {
+    fetch("http://localhost:7000/courses")
+      .then((r) => r.json())
+      .then((r) => setCourse(r));
+  }, []);
 
-  let students = student.map((item, { user, lecturer }) => {
-    function studentName(user, item) {
-      if (user.id === item.id) {
-        return user.name;
-      }
-    }
+  useEffect(() => {
+    fetch("http://localhost:7000/cohorts")
+      .then((r) => r.json())
+      .then((r) => setCohort(r));
+  }, []);
+
+  let students = student.map((item) => {
     let student_id = item.id;
-    let name = {};
+    let lecturer_id = item.lecturer_id;
+    let user_item = user.filter((item) => item.id === student_id)[0];
+    let lecturer_item = lecturer.filter((item) => item.id === lecturer_id)[0];
+    let user_lecturer_item = user.filter(
+      (item) => item.id === lecturer_item.user_id
+    )[0];
+
+    let course_item = course.filter(
+      (item) => item.id === lecturer_item.course_id
+    )[0];
+
+    let cohort_item = cohort.filter(
+      (item) => item.id === lecturer_item.cohort_id
+    );
+
+    let lecturer_name = user_lecturer_item.name;
+    let email = user_item.email;
+    let name = user_item.name;
+    let grade = item.grade;
+    let image = item.image;
+    let date_joined = user_item.created_at;
+
     return {
       student_id: student_id,
-      name: "",
-      lecturer_id: "",
-      lecturer: "",
-      image: "",
-      grade: "",
-      cohort: "",
-      cohort_id: "",
-      date_joined: "",
-      course: "",
-      course_id: "",
+      name: name,
+      email: email,
+      lecturer_id: lecturer_id,
+      lecturer: lecturer_name,
+      image: image,
+      grade: grade,
+      cohort: cohort_item.name,
+      cohort_id: lecturer_item.cohort_id,
+      date_joined: date_joined,
+      course: course_item.name,
+      course_id: lecturer_item.course_id,
     };
   });
 
-  console.log("student item", students);
-  function Student() {
+  console.log(students);
+  let student_cards = students.map((item) => {
     return (
-      <span className="course_item">
-        <img src="#" alt="course" />
+      <span className="course_item" key={item.id}>
+        <img src={item.image} alt="course" />
         <span>
-          <span></span>
-          <span className="pppp"></span>
+          <span>{item.name}</span>
+          <span className="pppp">
+            Grade: {item.grade}&nbsp; Date: {item.date_joined}
+          </span>
         </span>
         <button>View</button>
       </span>
     );
-  }
+  });
 
   function Course() {
     return (
@@ -78,6 +107,18 @@ export default function Lecturer() {
       </span>
     );
   }
+
+  let course_cards = course.map((item) => {
+    return (
+      <span className="course_item" key={item.id}>
+        <span>
+          <span>{item.name}</span>
+          <span className="pppp">{item.description}</span>
+        </span>
+        <button>View</button>
+      </span>
+    );
+  });
 
   return (
     <main id="lecturer">
@@ -102,7 +143,7 @@ export default function Lecturer() {
             </form>
           </span>
           <div className="course_list">
-            <Course />
+            {course_cards}
             <button className="view_button">View All</button>
           </div>
         </div>
@@ -117,7 +158,7 @@ export default function Lecturer() {
             </form>
           </span>
           <div className="student_list">
-            <Student />
+            {student_cards}
             <button className="view_button">View All</button>
           </div>
         </div>
@@ -127,7 +168,7 @@ export default function Lecturer() {
         <span id="lecturer_name">Enock Mokua</span>
         <img src="#" alt="lecturer" />
         <span id="lecturer_course">Machine Learning</span>
-        <span id="student_number">Students: 117</span>
+        <span id="student_number">May Intake</span>
         <span id="average_grade">Average grade: 78</span>
         <span> Rank: 17</span>
 
