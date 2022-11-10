@@ -40,7 +40,7 @@ function Login(props) {
             <h3 className="Auth-form-title">Sign In</h3>
             <div className="text-center">
               Not registered yet?{" "}
-              <span className="link-primary" onClick={navigateToSignUp}>
+              <span className="link-danger" onClick={navigateToSignUp}>
                 Sign Up
               </span>
             </div>
@@ -77,7 +77,7 @@ function Login(props) {
             </div>
             <div className="text-center">
                 Forgot Password?{" "}
-                <span className="link-primary" onClick={navigateToResetPassword}>
+                <span className="link-danger" onClick={navigateToResetPassword}>
                   Reset Password
                 </span>
               </div>
