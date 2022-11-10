@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate, useHistory } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 function Signup(props) {
   // form input controls
@@ -41,9 +41,6 @@ function Signup(props) {
 
   /* user navigations  */
   let navigate = useNavigate();
-  let navigateStudent = () => {
-    navigate("/students");
-  };
 
   const navigateToSignIn = () => {
     navigate("/login");
@@ -113,13 +110,14 @@ function Signup(props) {
             />
           </div>
           <div className="d-grid gap-2 mt-3">
-            <button
+            <Link
               type="submit"
               className="btn btn-danger"
-              onClick={navigateStudent}
+              to="/students"
+              onClick
             >
               Sign Up
-            </button>
+            </Link>
           </div>
           <div className="text-center">
             Forgot Password?{" "}
