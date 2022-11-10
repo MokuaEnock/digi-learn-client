@@ -1,6 +1,16 @@
-import React from "react"
+import React, { useState, useEffect } from "react";
 
 export default function Students(){
+
+    let [student, setStudent] = useState([]);
+
+    useEffect(() => {
+        fetch("http://localhost:7000/students")
+          .then((r) => r.json())
+          .then((r) => setStudent(r));
+      }, []);
+
+      
 
     function StudentDetailCard(){
         return(
