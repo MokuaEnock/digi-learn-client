@@ -1,7 +1,14 @@
 import React from "react";
 import { image, pic } from "./Data";
+import {useNavigate} from "react-router-dom"
 
 function Home() {
+
+  // navigate to sign up form
+  const navigate = useNavigate()
+  const navigateToSignUp = () => {
+    navigate('/signup');
+  };
   return (
     <>
       <div className="homeparent">
@@ -23,10 +30,11 @@ function Home() {
                 <span style={{ color: "red" }}>&#x2611;</span>Beginner Friendly
               </li>
             </ul>
-            <button id="get_started">Get Started Now</button>
+            {/* navigation to sigin */}
+            <button id="get_started" className="btn btn-danger" onClick={navigateToSignUp}>Get Started Now</button>
             <p>
               <span style={{ color: "red", fontSize: "bold" }}>&#8594;</span>
-              Proving ypu with a course management<br></br>
+              Providing you with a course management<br></br>
               system to track your lectures and students
             </p>
           </div>
