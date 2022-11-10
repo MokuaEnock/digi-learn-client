@@ -8,8 +8,6 @@ export default function Lecturer() {
   let [course, setCourse] = useState([]);
   let [cohort, setCohort] = useState([]);
 
-  console.log(course, cohort);
-
   /* fetching data */
   useEffect(() => {
     fetch("http://localhost:7000/users")
@@ -42,30 +40,42 @@ export default function Lecturer() {
   }, []);
 
   let students = student.map((item) => {
-
     let student_id = item.id;
     let lecturer_id = item.lecturer_id;
     let user_item = user.filter((item) => item.id === student_id)[0];
     let lecturer_item = lecturer.filter((item) => item.id === lecturer_id)[0];
+    let user_lecturer_item = user.filter(
+      (item) => item.id === lecturer_item.user_id
+    )[0];
+
+    let course_item = course.filter(
+      (item) => item.id === lecturer_item.course_id
+    )[0];
+
+    let cohort_item = cohort.filter(
+      (item) => item.id === lecturer_item.cohort_id
+    );
+
+    let lecturer_name = user_lecturer_item.name;
     let email = user_item.email;
     let name = user_item.name;
     let grade = item.grade;
     let image = item.image;
-    console.log("lecturerdddddddddddddd", lecturer_item);
+    let date_joined = user_item.created_at;
 
     return {
       student_id: student_id,
       name: name,
       email: email,
       lecturer_id: lecturer_id,
-      lecturer: "",
+      lecturer: lecturer_name,
       image: image,
       grade: grade,
-      cohort: "",
-      cohort_id: "",
-      date_joined: "",
-      course: "",
-      course_id: "",
+      cohort: cohort_item.name,
+      cohort_id: lecturer_item.cohort_id,
+      date_joined: date_joined,
+      course: course_item.name,
+      course_id: lecturer_item.course_id,
     };
   });
 
