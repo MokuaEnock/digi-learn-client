@@ -1,10 +1,35 @@
-# Getting Started with Create React App
+# Author : Enock Mokua 
+# Author : Andreen Muchiri
+# Author : Duncan Langat 
+# Author : Jose Muhlanga
+# Author : Ferdinant Mukodo
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Project Description
 
-## Available Scripts
+Our project aim is aid learning institutions manage their 
+school record better. They can be able to have all student details and also staff details all in one place, which can be easily accessed.exceptionally productive and saves alot of time
+# Screenshots
 
-In the project directory, you can run:
+![Screenshot (1928)](Screenshot from 2022-11-10 23-27-42.png))
+
+# SetUp Instruction
+
+## Requirements
+
+[HTML](lang Url) Text editor eg Visual Studio Code
+Getting Files
+
+# Fork the repo
+
+Create a new branch in your terminal (git checkout -b improve-feature) Install the prerequisites :
+
+    npm install
+    npm install bootstrap Make appropriate changes in file(s) Run the server to see the changes using: npm start Add the changes and commit them (git commit -am "Improve App") Push to the branch (git push origin improve-app) Create a Pull request
+
+Open the folder location on terminal and use the following command to run app: npm start
+Technologies Used:
+
+## ReactJs CSS Bootstrap V5 JavaScript
 
 ### `npm start`
 
@@ -29,42 +54,26 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+#Link to Backend
+https://github.com/MokuaEnock/digi-learn-server
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+# Contact Information
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Email : duncan.langat@student.moringaschool.com
+## Email : jose.muhlanga@student.moringaschool.com
+## Email : adreen.muchiri@student.moringaschool.com
+## Email : enock.mokua@student.moringaschool.com
+## Email : ferdinant.mukodo@student.moringaschool.com
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+# License
 
-## Learn More
+MIT License
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Copyright (c) [2019] [**]
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
-### Code Splitting
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Go back to the top
