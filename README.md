@@ -10,6 +10,7 @@ Our project aim is aid learning institutions manage their
 school record better. They can be able to have all student details and also staff details all in one place, which can be easily accessed.exceptionally productive and saves alot of time
 # Screenshots
 
+![Screenshot from 2022-11-10 23-55-48](https://user-images.githubusercontent.com/108465603/201204108-99b735fb-1627-4049-9c02-040c098a8eba.png)
 [Screenshot from 2022-11-10 23-27-42](https://user-images.githubusercontent.com/108465603/201203198-cbf88ed0-de0f-49fa-bde7-e2edcf579296.png)
 ![Screenshot from 2022-11-10 23-28-53](https://user-images.githubusercontent.com/108465603/201203202-05d04457-7060-4cea-9cc6-9adbdcefc540.png)
 ![Screenshot from 2022-11-10 23-29-06](https://user-images.githubusercontent.com/108465603/201203213-e4cfe09d-3f18-4b74-a006-c4d4e67c00c7.png)
