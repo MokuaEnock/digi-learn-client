@@ -3,11 +3,18 @@ import React, { useState, useEffect } from "react";
 export default function Students(){
 
     let [student, setStudent] = useState([]);
+    let [course, setCourse] = useState([]);
 
     useEffect(() => {
         fetch("http://localhost:7000/students")
           .then((r) => r.json())
           .then((r) => setStudent(r));
+      }, []);
+
+      useEffect(() => {
+        fetch("http://localhost:7000/courses")
+          .then((r) => r.json())
+          .then((r) => setCourse(r));
       }, []);
 
       
