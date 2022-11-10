@@ -19,6 +19,8 @@ export default function Students(){
 
       
 
+      
+
     function StudentDetailCard(){
         return(
             <aside id="main_student">
@@ -77,7 +79,7 @@ export default function Students(){
     return(
 
     <div className='Student'>
-        <div classNam e = 'student_header_section'>
+        <div className = 'student_header_section'>
             <StudentDetailCard />
         </div>
         <div className="student_course_list">
