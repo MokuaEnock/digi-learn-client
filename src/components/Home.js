@@ -2,6 +2,7 @@ import React from "react";
 //import { image, pic } from "./Data";
 import Image from "./img/image2.png";
 import Pic from "./img/image3.png";
+import Check from "./img/check-mark.png";
 
 function Home() {
   return (
@@ -18,17 +19,17 @@ function Home() {
           </span>
           <div id="span2">
             <span>
-              <img src="#" alt="checkbox" />
+              <img src={Check} alt="checkbox" />
               <p>Free</p>
             </span>
 
             <span>
-              <img src="#" alt="checkbox" />
+              <img src={Check} alt="checkbox" />
               <p>Fast</p>
             </span>
 
             <span>
-              <img src="#" alt="checkbox" />
+              <img src={Check} alt="checkbox" />
               <p>Friendly</p>
             </span>
           </div>

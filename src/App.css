@@ -211,7 +211,7 @@ label {
 }
 
 .main_image>img {
-  background-color: #FF033E;
+  background-color: #CEB5A3;
   width: 90%;
   height: 73%;
   display: flex;
@@ -239,7 +239,7 @@ label {
 
 .main_content>button {
   width: 35%;
-  height: 12%;
+  height: 15%;
   color: #ffffff;
   background-color: #FF033E;
   border-top-right-radius: 2.5vw;
@@ -278,12 +278,11 @@ label {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .main_content>#span2>span>img {
-  width: 35%;
-  height: 100%;
+  width: 17%;
   font-size: .5vw;
   display: flex;
   flex-direction: row;
@@ -293,13 +292,15 @@ label {
 }
 
 .main_content>#span2>span>p {
+  margin-top: 1vw;
+  margin-left: 1vw;
   width: 65%;
   height: 100%;
   font-size: 1.5vw;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: flex-start;
 
 }
 
