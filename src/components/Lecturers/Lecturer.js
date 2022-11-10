@@ -8,6 +8,8 @@ export default function Lecturer() {
   let [course, setCourse] = useState([]);
   let [cohort, setCohort] = useState([]);
 
+  console.log(course, cohort);
+
   /* fetching data */
   useEffect(() => {
     fetch("http://localhost:7000/users")
@@ -33,8 +35,13 @@ export default function Lecturer() {
       .then((r) => setCourse(r));
   }, []);
 
+  useEffect(() => {
+    fetch("http://localhost:7000/cohorts")
+      .then((r) => r.json())
+      .then((r) => setCohort(r));
+  }, []);
+
   let students = student.map((item) => {
-    // console.log("userrrrrrrrrrrrrrrr", user);
 
     let student_id = item.id;
     let lecturer_id = item.lecturer_id;
