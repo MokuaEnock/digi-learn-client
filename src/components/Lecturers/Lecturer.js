@@ -7,13 +7,17 @@ export default function Lecturer() {
   let [student, setStudent] = useState([]);
   let [course, setCourse] = useState([]);
   let [cohort, setCohort] = useState([]);
+  let [searchCourse, setSearchCourse] = useState([]);
+  let [searchStudent, setSearchStudent] = useState([]);
+  let [newStudentItem, setNewStudentItem] = useState([]);
+  let [newCourseItem, setNewCourseItem] = useState([]);
 
   /* fetching data */
   useEffect(() => {
     fetch("http://localhost:7000/users")
       .then((r) => r.json())
       .then((r) => setUser(r));
-  }, []);
+  }, [setUser]);
 
   useEffect(() => {
     fetch("http://localhost:7000/lecturers")
@@ -39,6 +43,17 @@ export default function Lecturer() {
       .then((r) => setCohort(r));
   }, []);
 
+  /* create function to search courses */
+  function handleSearchCourses(e) {
+    e.preventDefault();
+    const filteredCourses = course.filter((item) =>
+      Object.values(item).some(
+        (val) => typeof val === "string" && val.includes(searchCourse)
+      )
+    );
+  }
+
+  /* function to create student object */
   let students = student.map((item) => {
     let student_id = item.id;
     let lecturer_id = item.lecturer_id;
@@ -79,8 +94,38 @@ export default function Lecturer() {
     };
   });
 
-  console.log(students);
-  let student_cards = students.map((item) => {
+  /* create function to search students */
+  function handleSearchStudent(e) {
+    e.preventDefault();
+    const filteredStudents = students.filter((item) =>
+      Object.values(item).some(
+        (val) => typeof val === "string" && val.includes(searchStudent)
+      )
+    );
+  }
+
+  /* function to handle studnet view button */
+  let handleStudentView = (index) => () => {
+    let courseee = document.querySelector(".main_course_aside");
+    let ssstudent = document.querySelector(".main_student_aside");
+    ssstudent.style.display = "flex";
+    courseee.style.display = "none";
+    let newItem = students[index];
+    return setNewStudentItem([newItem]);
+  };
+
+  /* function to handle studnet view button */
+  let handleCourseView = (index) => () => {
+    let courseee = document.querySelector(".main_course_aside");
+    let ssstudent = document.querySelector(".main_student_aside");
+    ssstudent.style.display = "none";
+    courseee.style.display = "flex";
+    let newItem = course[index];
+    return setNewCourseItem([newItem]);
+  };
+
+  /* function to render studnet cards set with data */
+  let student_cards = students.map((item, index) => {
     return (
       <span className="course_item" key={item.id}>
         <img src={item.image} alt="course" />
@@ -90,32 +135,47 @@ export default function Lecturer() {
             Grade: {item.grade}&nbsp; Date: {item.date_joined}
           </span>
         </span>
-        <button>View</button>
+        <button onClick={handleStudentView(index)}>View</button>
       </span>
     );
   });
 
-  function Course() {
+  /* fucntion render cards to main aside student component */
+  let aside_student = newStudentItem.map((item) => {
     return (
-      <span className="course_item">
-        <img src="#" alt="course" />
-        <span>
-          <span></span>
-          <span className="pppp"></span>
-        </span>
-        <button>View</button>
-      </span>
+      <aside id="main_student" className="main_student_aside">
+        <span id="lecturer_name">{item.name}</span>
+        <img src={item.image} alt="student" />
+        <span id="lecturer_course">Course: {item.course}</span>
+        <span id="student_number">Lec: {item.lecturer}</span>
+        <span id="average_grade">Grade: {item.grade}</span>
+        <span>Rank: {Math.floor(Math.random() * 3) + 1}</span>
+        <span id="date_joined">{item.date_joined}</span>
+      </aside>
     );
-  }
+  });
 
-  let course_cards = course.map((item) => {
+  /* fucntion render cards to main aside student component */
+  let aside_course = newCourseItem.map((item) => {
+    return (
+      <aside id="main_student" className="main_course_aside">
+        <span id="lecturer_name">{item.name}</span>
+        <span id="lecturer_course">Duration: {item.duration} months.</span>
+        <span id="student_number">Lec: {item.description}</span>
+        <span id="date_joined">{item.updated_at}</span>
+      </aside>
+    );
+  });
+
+  /* function to render course cards set with data */
+  let course_cards = course.map((item, index) => {
     return (
       <span className="course_item" key={item.id}>
         <span>
           <span>{item.name}</span>
           <span className="pppp">{item.description}</span>
         </span>
-        <button>View</button>
+        <button onClick={handleCourseView(index)}>View</button>
       </span>
     );
   });
@@ -123,7 +183,7 @@ export default function Lecturer() {
   return (
     <main id="lecturer">
       <aside id="main_lecturer">
-        <span id="lecturer_name">Enock Mokua</span>
+        <span id="lecturer_name">Lecturer name</span>
         <img src="#" alt="lecturer" />
         <span id="lecturer_course">Machine Learning</span>
         <span id="student_number">Students: 117</span>
@@ -138,8 +198,15 @@ export default function Lecturer() {
           <span className="title">
             <span>Courses</span>
             <form>
-              <button type="submit">Search</button>
-              <input type="" required />
+              <button type="submit" onClick={handleSearchCourses}>
+                Search
+              </button>
+              <input
+                type="text"
+                value={searchCourse}
+                required
+                onChange={(e) => setSearchCourse(e.target.value)}
+              />
             </form>
           </span>
           <div className="course_list">
@@ -153,8 +220,15 @@ export default function Lecturer() {
           <span className="title">
             <span>Students</span>
             <form>
-              <button type="submit">Search</button>
-              <input type="" required />
+              <button type="submit" onClick={handleSearchStudent}>
+                Search
+              </button>
+              <input
+                type="text"
+                value={searchStudent}
+                onChange={(e) => setSearchStudent(e.target.value)}
+                required
+              />
             </form>
           </span>
           <div className="student_list">
@@ -164,16 +238,8 @@ export default function Lecturer() {
         </div>
       </section>
 
-      <aside id="main_student">
-        <span id="lecturer_name">Enock Mokua</span>
-        <img src="#" alt="lecturer" />
-        <span id="lecturer_course">Machine Learning</span>
-        <span id="student_number">May Intake</span>
-        <span id="average_grade">Average grade: 78</span>
-        <span> Rank: 17</span>
-
-        <span id="date_joined">Date Joined: 08/12/2012</span>
-      </aside>
+      <>{aside_student || aside_course}</>
+      <>{aside_course}</>
     </main>
   );
 }
