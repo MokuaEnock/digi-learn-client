@@ -79,7 +79,21 @@ export default function Lecturer() {
     };
   });
 
-  console.log("student item", students);
+  // let courses = course.map((item) => {
+  //   let lecturers = lecturer.filter((item) => {
+  //     return item.id === 1;
+  //   });
+  //   return {
+  //     id: item.id,
+  //     name: item.name,
+  //     desciption: item.desciption,
+  //     duration: item.duration,
+  //     created_at: item.created_at,
+  //   };
+  // });
+
+  console.log("course all data", courses);
+  console.log("course item", course);
 
   function Student() {
     return (
