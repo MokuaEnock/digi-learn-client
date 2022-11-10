@@ -19,6 +19,8 @@ export default function Students(){
 
       
 
+      
+
     function StudentDetailCard(){
         return(
             <aside id="main_student">
