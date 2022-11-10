@@ -5,6 +5,8 @@ export default function Lecturer() {
   let [lecturer, setLecturer] = useState([]);
   let [user, setUser] = useState([]);
   let [student, setStudent] = useState([]);
+  let [course, setCourse] = useState([]);
+  let [cohort, setCohort] = useState([]);
 
   /* fetching data */
   useEffect(() => {
@@ -25,25 +27,33 @@ export default function Lecturer() {
       .then((r) => setStudent(r));
   }, []);
 
-  // console.log("user", user);
-  // console.log("lecturer", lecturer);
-  console.log("student", student);
+  useEffect(() => {
+    fetch("http://localhost:7000/courses")
+      .then((r) => r.json())
+      .then((r) => setCourse(r));
+  }, []);
 
-  let students = student.map((item, { user, lecturer }) => {
-    function studentName(user, item) {
-      if (user.id === item.id) {
-        return user.name;
-      }
-    }
+  let students = student.map((item) => {
+    // console.log("userrrrrrrrrrrrrrrr", user);
+
     let student_id = item.id;
-    let name = {};
+    let lecturer_id = item.lecturer_id;
+    let user_item = user.filter((item) => item.id === student_id)[0];
+    let lecturer_item = lecturer.filter((item) => item.id === lecturer_id)[0];
+    let email = user_item.email;
+    let name = user_item.name;
+    let grade = item.grade;
+    let image = item.image;
+    console.log("lecturerdddddddddddddd", lecturer_item);
+
     return {
       student_id: student_id,
-      name: "",
-      lecturer_id: "",
+      name: name,
+      email: email,
+      lecturer_id: lecturer_id,
       lecturer: "",
-      image: "",
-      grade: "",
+      image: image,
+      grade: grade,
       cohort: "",
       cohort_id: "",
       date_joined: "",
@@ -53,6 +63,7 @@ export default function Lecturer() {
   });
 
   console.log("student item", students);
+
   function Student() {
     return (
       <span className="course_item">
@@ -127,7 +138,7 @@ export default function Lecturer() {
         <span id="lecturer_name">Enock Mokua</span>
         <img src="#" alt="lecturer" />
         <span id="lecturer_course">Machine Learning</span>
-        <span id="student_number">Students: 117</span>
+        <span id="student_number">May Intake</span>
         <span id="average_grade">Average grade: 78</span>
         <span> Rank: 17</span>
 
