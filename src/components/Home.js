@@ -1,6 +1,10 @@
 import React from "react";
-import { image, pic } from "./Data";
+//import { image, pic } from "./Data";
+import Image from "./img/image2.png";
+import Pic from "./img/image3.png";
+import Check from "./img/check-mark.png";
 import {useNavigate} from "react-router-dom"
+
 
 function Home() {
 
@@ -10,38 +14,71 @@ function Home() {
     navigate('/signup');
   };
   return (
-    <>
-      <div className="homeparent">
-        <h1>
-          Putting Your Own Future<br></br>
-          in Great Motion
-        </h1>
-        <div className="page">
-          <img src={image.url} alt="congrats" />
-          <div className="centre">
-            <ul>
-              <li>
-                <span style={{ background: "red" }}>&#x2611;</span>Free
-              </li>
-              <li>
-                <span style={{ color: "red" }}>&#x2611;</span>Fast
-              </li>
-              <li>
-                <span style={{ color: "red" }}>&#x2611;</span>Beginner Friendly
-              </li>
-            </ul>
-            {/* navigation to sigin */}
-            <button id="get_started" className="btn btn-danger" onClick={navigateToSignUp}>Get Started Now</button>
-            <p>
-              <span style={{ color: "red", fontSize: "bold" }}>&#8594;</span>
-              Providing you with a course management<br></br>
-              system to track your lectures and students
-            </p>
-          </div>
-          <img src={pic.url} alt="congrats" />
+    <main>
+      <section className="main_section1">
+        <div className="main_image" id="image1">
+          <img src={Image} alt="student" />
         </div>
-      </div>
-    </>
+
+        <div className="main_content">
+          <span id="span1">
+            Putting Your Own Future <br />
+            in Great Motion
+          </span>
+          <div id="span2">
+            <span>
+              <img src={Check} alt="checkbox" />
+              <p>Free</p>
+            </span>
+
+            <span>
+              <img src={Check} alt="checkbox" />
+              <p>Fast</p>
+            </span>
+
+            <span>
+              <img src={Check} alt="checkbox" />
+              <p>Friendly</p>
+            </span>
+          </div>
+          <button onClick={navigateToSignUp}>Get Started Now</button>
+          <button>Get Started</button>
+          <span id="span3">
+            Providing you with a course management system to track your
+            lecturers and students.
+          </span>
+        </div>
+
+        <div className="main_image">
+          <img src={Pic} alt="student" />
+        </div>
+      </section>
+      <section className="main_section2">
+        <div>
+          <span>
+            <span id="color1"></span>
+            <p>05+</p>
+          </span>
+          <span>Free Courses</span>
+        </div>
+
+        <div>
+          <span>
+            <span id="color2"></span>
+            <p>05+</p>
+          </span>
+          <span>Qualified Lecturers</span>
+        </div>
+
+        <div>
+          <span>
+            <span id="color3"></span>
+            <p>05+</p>
+          </span>
+          <span>Ready Students</span>
+        </div>
+      </section>
+    </main>
   );
 }
 export default Home;
