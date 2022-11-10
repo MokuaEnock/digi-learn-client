@@ -79,34 +79,21 @@ export default function Lecturer() {
     };
   });
 
-  // let courses = course.map((item) => {
-  //   let lecturers = lecturer.filter((item) => {
-  //     return item.id === 1;
-  //   });
-  //   return {
-  //     id: item.id,
-  //     name: item.name,
-  //     desciption: item.desciption,
-  //     duration: item.duration,
-  //     created_at: item.created_at,
-  //   };
-  // });
-
-  // console.log("course all data", courses);
-  console.log("course item", course);
-
-  function Student() {
+  console.log(students);
+  let student_cards = students.map((item) => {
     return (
-      <span className="course_item">
-        <img src="#" alt="course" />
+      <span className="course_item" key={item.id}>
+        <img src={item.image} alt="course" />
         <span>
-          <span></span>
-          <span className="pppp"></span>
+          <span>{item.name}</span>
+          <span className="pppp">
+            Grade: {item.grade}&nbsp; Date: {item.date_joined}
+          </span>
         </span>
         <button>View</button>
       </span>
     );
-  }
+  });
 
   function Course() {
     return (
@@ -120,6 +107,18 @@ export default function Lecturer() {
       </span>
     );
   }
+
+  let course_cards = course.map((item) => {
+    return (
+      <span className="course_item" key={item.id}>
+        <span>
+          <span>{item.name}</span>
+          <span className="pppp">{item.description}</span>
+        </span>
+        <button>View</button>
+      </span>
+    );
+  });
 
   return (
     <main id="lecturer">
@@ -144,7 +143,7 @@ export default function Lecturer() {
             </form>
           </span>
           <div className="course_list">
-            <Course />
+            {course_cards}
             <button className="view_button">View All</button>
           </div>
         </div>
@@ -159,7 +158,7 @@ export default function Lecturer() {
             </form>
           </span>
           <div className="student_list">
-            <Student />
+            {student_cards}
             <button className="view_button">View All</button>
           </div>
         </div>
