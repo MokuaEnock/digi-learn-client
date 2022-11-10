@@ -3,37 +3,70 @@ import { image, pic } from "./Data";
 
 function Home() {
   return (
-    <>
-      <div className="homeparent">
-        <h1>
-          Putting Your Own Future<br></br>
-          in Great Motion
-        </h1>
-        <div className="page">
-          <img src={image.url} alt="congrats" />
-          <div className="centre">
-            <ul>
-              <li>
-                <span style={{ background: "red" }}>&#x2611;</span>Free
-              </li>
-              <li>
-                <span style={{ color: "red" }}>&#x2611;</span>Fast
-              </li>
-              <li>
-                <span style={{ color: "red" }}>&#x2611;</span>Beginner Friendly
-              </li>
-            </ul>
-            <button id="get_started">Get Started Now</button>
-            <p>
-              <span style={{ color: "red", fontSize: "bold" }}>&#8594;</span>
-              Proving ypu with a course management<br></br>
-              system to track your lectures and students
-            </p>
-          </div>
-          <img src={pic.url} alt="congrats" />
-        </div>
+    <main>
+    <section className="main_section1">
+      <div className="main_image">
+        <img src="#" alt="student" />
       </div>
-    </>
+
+      <div className="main_content">
+        <span id="span1">
+          Putting Your Own Future <br />
+          in Great Motion
+        </span>
+        <div id="span2">
+          <span>
+            <img src="#" alt="checkbox" />
+            <p>Free</p>
+          </span>
+
+          <span>
+            <img src="#" alt="checkbox" />
+            <p>Fast</p>
+          </span>
+
+          <span>
+            <img src="#" alt="checkbox" />
+            <p>Friendly</p>
+          </span>
+        </div>
+        <button>Get Started</button>
+        <span id="span3">
+          Providing you with a course management system to track your
+          lecturers and students.
+        </span>
+      </div>
+
+      <div className="main_image">
+        <img src="#" alt="student" />
+      </div>
+    </section>
+    <section className="main_section2">
+      <div>
+        <span>
+          <span id="color1"></span>
+          <p>05+</p>
+        </span>
+        <span>Free Courses</span>
+      </div>
+
+      <div>
+        <span>
+          <span id="color2"></span>
+          <p>05+</p>
+        </span>
+        <span>Qualified Lecturers</span>
+      </div>
+
+      <div>
+        <span>
+          <span id="color3"></span>
+          <p>05+</p>
+        </span>
+        <span>Ready Students</span>
+      </div>
+    </section>
+  </main>
   );
 }
 export default Home;

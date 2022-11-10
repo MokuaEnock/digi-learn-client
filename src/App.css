@@ -20,6 +20,8 @@ body {
   margin-bottom: .5vw;
 }
 
+/* Navbar ========================================================== */
+
 .navbar {
   background-color: rgba(6, 106, 188, 0);
   width: 100%;
@@ -54,7 +56,7 @@ body {
   font-size: 3vw;
   font-weight: 600;
   letter-spacing: .3vw;
-  
+
 }
 
 .navbar>button {
@@ -91,6 +93,8 @@ body {
 body {
   background-color: #f9edd8;
 }
+
+/* Authrntication form ================================================= */
 
 .Auth-form-container {
   display: flex;
@@ -173,16 +177,224 @@ label {
   padding: 14px;
 }
 
-.page button{
+.page button {
   border-radius: 5px 25px;
   height: 60px;
 }
-.page p{
+
+.page p {
   padding-top: 30px;
   font-size: 25px;
   font-weight: 400;
 }
 
+/* Landing page ========================================================= */
+
+
+.main_section1 {
+  width: 100%;
+  height: 40vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+
+}
+
+.main_image {
+  width: 25%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+
+}
+
+.main_image>img {
+  background-color: #FF033E;
+  width: 90%;
+  height: 73%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  border-top-right-radius: 7vw;
+  border-bottom-left-radius: 7vw;
+  color: white;
+  font-size: 1.5vw;
+}
+
+.main_content {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.main_content>* {
+  margin-bottom: 1vw;
+}
+
+.main_content>button {
+  width: 35%;
+  height: 12%;
+  color: #ffffff;
+  background-color: #FF033E;
+  border-top-right-radius: 2.5vw;
+  border-bottom-left-radius: 2.5vw;
+  color: white;
+  font-size: 2vw;
+  letter-spacing: .2vw;
+  border: thin solid transparent;
+  cursor: pointer;
+
+}
+
+.main_content>#span1 {
+  width: 100%;
+  height: max-content;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  text-align: center;
+  font-size: 4vw;
+  font-weight: bold;
+
+}
+
+.main_content>#span2 {
+  width: 100%;
+  height: 12%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.main_content>#span2>span {
+  width: 25%;
+  height: 80%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.main_content>#span2>span>img {
+  width: 35%;
+  height: 100%;
+  font-size: .5vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+
+}
+
+.main_content>#span2>span>p {
+  width: 65%;
+  height: 100%;
+  font-size: 1.5vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+
+}
+
+.main_content>#span3 {
+  width: 60%;
+  font-size: 1.7vw;
+  height: max-content;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  letter-spacing: .03vw;
+  text-align: justify;
+}
+
+/* scetion 2 */
+
+.main_section2 {
+  margin-top: 1vw;
+  width: 100%;
+  height: 17.5vw;
+  border: thin solid #2E1807;
+  margin-bottom: 1vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+.main_section2>div {
+  width: 33%;
+  height: 100%;
+  background-color: #2E1807;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+.main_section2>div>span {
+  width: 90%;
+  height: 50%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.main_section2>div>span>span {
+  width: 30%;
+  height: 90%;
+  background-color: white;
+  border-top-right-radius: 2vw;
+  border-bottom-left-radius: 2vw;
+}
+
+#color1 {
+  background-color: #FF4500;
+}
+
+#color2 {
+  background-color: #FFFF00;
+
+}
+
+#color3 {
+  background-color: #3FFF00;
+
+}
+
+.main_section2>div>span>p {
+  width: 70%;
+  height: 90%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  font-size: 6vw;
+  font-weight: bold;
+  color: white;
+}
+
+.main_section2>div>span {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: 3vw;
+  font-weight: bold;
+  color: white;
+}
+
+
+/* Lecturer  section ==================================================== */
 
 #lecturer {
   border: thin solid black;
@@ -609,19 +821,21 @@ input:focus {
 #date_joined {}
 
 #average_grade {} */
-.column{
+.column {
   display: flex;
   width: 60% auto;
   justify-content: space-between;
-  padding-top: 40px;;
+  padding-top: 40px;
+  ;
   text-align: center;
   color: white;
   margin-left: 25%;
   margin-right: 25%;
 }
 
-#column_li{
+#column_li {
   border: 1px solid;
   background-color: rgb(23, 11, 11);
-  width: 30%; ;
+  width: 30%;
+  ;
 }
