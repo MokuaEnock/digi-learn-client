@@ -41,7 +41,7 @@ function Home() {
               <p>Friendly</p>
             </span>
           </div>
-          <button onClick={navigateToSignUp}>Get Started Now</button>
+          <button onClick={navigateToSignUp}>Get Started</button>
           <span id="span3">
             Providing you with a course management system to track your
             lecturers and students.
