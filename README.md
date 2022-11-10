@@ -5,8 +5,9 @@
 </div>
 <br/>
 
+## CONTRIBUTORS
 <details>
-<summary>Digi Learn Project Contributors</summary>
+<summary></summary>
 
 - ENOCK MOKUA `SCRUM MASTER`
 - ANDREEN MUCHIRI `MEMBER`
