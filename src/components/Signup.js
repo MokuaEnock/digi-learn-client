@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+
 function Signup(props) {
   // form input controls
   const [state, setState] = useState({
@@ -8,24 +9,37 @@ function Signup(props) {
     email: "",
     password: "",
   });
+
   // post request to backend
   const userdetails = props.userdetails;
   const setUserdetails = props.setUserdetails;
 
   function handleSubmit(e) {
     e.preventDefault();
-    fetch("", {
+
+    console.log({
+      name: `${state.firstname} ${state.lastname}`,
+      email: state.email,
+      password: state.password,
+    });
+
+    fetch("http://localhost:7000/users", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
         Accept: "application/json",
       },
-      body: JSON.stringify(state),
+      body: JSON.stringify({
+        name: `${state.firstname} ${state.lastname}`,
+        email: state.email,
+        password: state.password,
+      }),
     })
       .then((res) => res.json())
       .then((data) => {
-        setUserdetails([...userdetails, data]);
+        console.log(data);
       });
+    useNavigate("/login")
   }
 
   const handleChange = (event) => {
