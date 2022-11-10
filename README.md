@@ -83,7 +83,8 @@ Use these files to complete the implementation:
 
 <details>
 <summary>TECHNOLOGY USED</summary>
-**REACTJS 
+
+**REACTJS**
 **RUBY**
 **SINATRA**
 **BOOTSTRAP**
