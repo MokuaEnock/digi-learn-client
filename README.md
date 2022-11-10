@@ -10,7 +10,12 @@ Our project aim is aid learning institutions manage their
 school record better. They can be able to have all student details and also staff details all in one place, which can be easily accessed.exceptionally productive and saves alot of time
 # Screenshots
 
-![Screenshot (1928)](Screenshot from 2022-11-10 23-27-42.png))
+[Screenshot from 2022-11-10 23-27-42](https://user-images.githubusercontent.com/108465603/201203198-cbf88ed0-de0f-49fa-bde7-e2edcf579296.png)
+![Screenshot from 2022-11-10 23-28-53](https://user-images.githubusercontent.com/108465603/201203202-05d04457-7060-4cea-9cc6-9adbdcefc540.png)
+![Screenshot from 2022-11-10 23-29-06](https://user-images.githubusercontent.com/108465603/201203213-e4cfe09d-3f18-4b74-a006-c4d4e67c00c7.png)
+![Screenshot from 2022-11-10 23-29-08](https://user-images.githubusercontent.com/108465603/201203221-24fa3730-f74a-42bd-87cc-9ebe452ead87.png)
+![Screenshot from 2022-11-10 23-29-21](https://user-images.githubusercontent.com/108465603/201203224-3e261e55-2d9e-44d3-9c6f-64cae99dcb0f.png)
+![Screenshot from 2022-11-10 23-49-53](https://user-images.githubusercontent.com/108465603/201203227-1fff1310-2c72-4695-8e57-c732cc73552d.png)
 
 # SetUp Instruction
 
