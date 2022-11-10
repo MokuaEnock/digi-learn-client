@@ -1,6 +1,25 @@
-import React from "react"
+import React, { useState, useEffect } from "react";
 
 export default function Students(){
+
+    let [student, setStudent] = useState([]);
+    let [course, setCourse] = useState([]);
+
+    useEffect(() => {
+        fetch("http://localhost:7000/students")
+          .then((r) => r.json())
+          .then((r) => setStudent(r));
+      }, []);
+
+      useEffect(() => {
+        fetch("http://localhost:7000/courses")
+          .then((r) => r.json())
+          .then((r) => setCourse(r));
+      }, []);
+
+      
+
+      
 
     function StudentDetailCard(){
         return(
@@ -17,16 +36,33 @@ export default function Students(){
         )
     }
 
-    function Course() {
+    let course_cards = course.map((item) => {
         return (
-          <span className="course_item">
-            <img src="#" alt="course" />
+          <span className="course_item" key={item.id}>
             <span>
-              <span></span>
-              <span className="pppp"></span>
+              <span>{item.name}</span>
+              <span className="pppp">{item.description}</span>
             </span>
             <button>View</button>
           </span>
+        );
+      });
+
+    function Course() {
+        return (
+            <div id="courses">
+            <span className="title">
+              <span>Courses</span>
+              <form>
+                <button type="submit">Search</button>
+                <input type="" required />
+              </form>
+            </span>
+            <div className="course_list">
+              {course_cards}
+              <button className="view_button">View All</button>
+            </div>
+          </div>
         );
       }
 
