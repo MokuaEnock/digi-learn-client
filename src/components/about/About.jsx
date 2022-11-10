@@ -14,20 +14,13 @@ function About() {
           <div className="left row">
             <Heading
               title="Our  Story"
-              subtitle="Check out our company story "
+              subtitle="Check out About us "
             />
 
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit
-              necessitatibus numquam eos reiciendis alias, expedita, quidem
-              explicabo hic voluptates voluptate dolor repudiandae quis corrupti
-              nulla, iste mollitia similique dolorum animi?
-            </p>
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-              Excepturi praesentium vero repellendus animi commodi architecto
-              qui, ipsam reiciendis odio eligendi ut? Reprehenderit, aut itaque
-              impedit accusantium alias quaerat culpa distinctio.
+              Digi Learn  is a platform designed to aid learning institutions manage their 
+              school record better. They can be able to have all student details and also staff 
+              details all in one place, which can be easily accessed. It is exceptionally productive and saves alot of time
             </p>
             {/* <button className='btn2'>More About Us</button> */}
           </div>
