@@ -7,11 +7,11 @@
 
 <details>
 <summary>Digi Learn Project Contributors</summary>
-- ENOCK MOKUA **SCRUM MASTER**
-- ANDREEN MUCHIRI **MEMBER**
-- DUNCAN CHERYOT **MEMBER**
-- JOSE MUHLANGA **MEMBER**
-- FERDINAND **MEMBER**
+- ENOCK MOKUA `SCRUM MASTER`
+- ANDREEN MUCHIRI `MEMBER`
+- DUNCAN CHERYOT `MEMBER`
+- JOSE MUHLANGA `MEMBER`
+- FERDINAND `MEMBER`
 </details>
 
 ### Set Up Instructions
