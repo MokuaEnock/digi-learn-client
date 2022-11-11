@@ -2,90 +2,55 @@ import React, { useState, useEffect } from "react";
 import "./student.css";
 
 export default function Students() {
-  // let [student, setStudent] = useState([]);
-  // let [course, setCourse] = useState([]);
+  let [lecturer, setLecturer] = useState([]);
+  let [user, setUser] = useState([]);
+  let [student, setStudent] = useState([]);
+  let [course, setCourse] = useState([]);
+  let [cohort, setCohort] = useState([]);
+  let [searchCourse, setSearchCourse] = useState([]);
+  let [searchStudent, setSearchStudent] = useState([]);
+  let [newStudentItem, setNewStudentItem] = useState([]);
+  let [newCourseItem, setNewCourseItem] = useState([]);
 
-  // useEffect(() => {
-  //   fetch("http://localhost:7000/students")
-  //     .then((r) => r.json())
-  //     .then((r) => setStudent(r));
-  // }, []);
+  useEffect(() => {
+    fetch("http://localhost:7000/users")
+      .then((r) => r.json())
+      .then((r) => setUser(r));
+  }, [setUser]);
 
-  // useEffect(() => {
-  //   fetch("http://localhost:7000/courses")
-  //     .then((r) => r.json())
-  //     .then((r) => setCourse(r));
-  // }, []);
+  useEffect(() => {
+    fetch("http://localhost:7000/lecturers")
+      .then((r) => r.json())
+      .then((r) => setLecturer(r));
+  }, []);
 
-  // function StudentDetailCard() {
-  //   return (
-  //     <aside id="main_student">
-  //       <span id="lecturer_name">Enock Mokua</span>
-  //       <img src="#" alt="lecturer" />
-  //       <span id="lecturer_course">Machine Learning</span>
-  //       <span id="student_number">Students: 117</span>
-  //       <span id="average_grade">Average grade: 78</span>
-  //       <span> Rank: 17</span>
+  useEffect(() => {
+    fetch("http://localhost:7000/students")
+      .then((r) => r.json())
+      .then((r) => setStudent(r));
+  }, []);
 
-  //       <span id="date_joined">Date Joined: 08/12/2012</span>
-  //     </aside>
-  //   );
-  // }
+  let all = student.length === 0 ? "Loading ..." : student;
+  let users = user.length === 0 ? "Loading ..." : user;
+  let lecturers = user.length === 0 ? "Loading ..." : lecturer;
 
-  // let course_cards = course.map((item) => {
-  //   return (
-  //     <span className="course_item" key={item.id}>
-  //       <span>
-  //         <span>{item.name}</span>
-  //         <span className="pppp">{item.description}</span>
-  //       </span>
-  //       <button>View</button>
-  //     </span>
-  //   );
-  // });
-
-  // function Course() {
-  //   return (
-  //     <div id="courses">
-  //       <span className="title">
-  //         <span>Courses</span>
-  //         <form>
-  //           <button type="submit">Search</button>
-  //           <input type="" required />
-  //         </form>
-  //       </span>
-  //       <div className="course_list">
-  //         {course_cards}
-  //         <button className="view_button">View All</button>
-  //       </div>
-  //     </div>
-  //   );
-  // }
-
-  // function Grade() {
-  //   return (
-  //     <>
-  //       <span id="lecturer_course">Machine Learning</span>
-  //       <span id="average_grade">Average grade: 78</span>
-  //       <span> Rank: 17</span>
-  //     </>
-  //   );
-  // }
+  let all1 = all[0];
+  let users1 = users[0];
+  let rank = Math.floor(Math.random() * 10) + 1;
 
   return (
     <main id="student">
       <section id="profile">
-        <img src="#" alt="user" />
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
+        <img src={all1.image} alt="user" />
+        <span>Grade: {all1.grade}</span>
+        <span>Name: {users1.name}</span>
+        <span>Rank: {rank}</span>
       </section>
       <section id="details">
         <div id="lecturer">
-          <span id="lec_image"></span>
+          <img src={lecturers[0].image} alt="lecturer" id="lec_image" />
           <span id="lec_details">
-            <span id="lec_name">Enock Mokua</span>
+            <span id="lec_name">Enock</span>
             <span id="course_details">
               <p>Number of students: 119</p>
               <p>Course length: 6 months</p>
