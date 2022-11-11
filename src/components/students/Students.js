@@ -13,17 +13,17 @@ export default function Students() {
   let [newStudentItem, setNewStudentItem] = useState([]);
   let [newCourseItem, setNewCourseItem] = useState([]);
 
-  // useEffect(() => {
-  //   fetch("http://localhost:7000/users")
-  //     .then((r) => r.json())
-  //     .then((r) => setUser(r));
-  // }, [setUser]);
+  useEffect(() => {
+    fetch("http://localhost:7000/users")
+      .then((r) => r.json())
+      .then((r) => setUser(r));
+  }, [setUser]);
 
-  // useEffect(() => {
-  //   fetch("http://localhost:7000/lecturers")
-  //     .then((r) => r.json())
-  //     .then((r) => setLecturer(r));
-  // }, []);
+  useEffect(() => {
+    fetch("http://localhost:7000/lecturers")
+      .then((r) => r.json())
+      .then((r) => setLecturer(r));
+  }, []);
 
   useEffect(() => {
     fetch("http://localhost:7000/students")
@@ -31,43 +31,31 @@ export default function Students() {
       .then((r) => setStudent(r));
   }, []);
 
-  /*   let h  = {if (student === 0) {
-    return "Loading ..... ";
-  } else {
-    console.log(student);
-  }} */
-
-  let all = student === false ? "Loading ..." : student;
+  let all = student.length === 0 ? "Loading ..." : student;
+  let users = user.length === 0 ? "Loading ..." : user;
+  let lecturers = user.length === 0 ? "Loading ..." : lecturer;
 
   let all1 = all[0];
-
   console.log(all1);
-  // useEffect(() => {
-  //   fetch("http://localhost:7000/courses")
-  //     .then((r) => r.json())
-  //     .then((r) => setCourse(r));
-  // }, []);
 
-  // useEffect(() => {
-  //   fetch("http://localhost:7000/cohorts")
-  //     .then((r) => r.json())
-  //     .then((r) => setCohort(r));
-  // }, []);
+  let users1 = users[0];
+  console.log(users1);
+  let rank = Math.floor(Math.random() * 10) + 1;
 
   return (
     <main id="student">
       <section id="profile">
         <img src={all1.image} alt="user" />
         <span>Grade: {all1.grade}</span>
-        <span></span>
-        <span></span>
-        <span></span>
+        <span>Name: {users1.name}</span>
+        {/* <span>Joined: {date}</span> */}
+        <span>Rank: {rank}</span>
       </section>
       <section id="details">
         <div id="lecturer">
-          <img src="#" alt="lecturer" id="lec_image" />
+          <img src={lecturers[0].image} alt="lecturer" id="lec_image" />
           <span id="lec_details">
-            <span id="lec_name">Enock Mokua</span>
+            <span id="lec_name">Enock</span>
             <span id="course_details">
               <p>Number of students: 119</p>
               <p>Course length: 6 months</p>
