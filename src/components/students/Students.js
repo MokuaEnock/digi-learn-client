@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { ErrorBoundary } from "react-error-boundary";
 import "./student.css";
 
 export default function Students() {
@@ -12,17 +13,17 @@ export default function Students() {
   let [newStudentItem, setNewStudentItem] = useState([]);
   let [newCourseItem, setNewCourseItem] = useState([]);
 
-  useEffect(() => {
-    fetch("http://localhost:7000/users")
-      .then((r) => r.json())
-      .then((r) => setUser(r));
-  }, [setUser]);
+  // useEffect(() => {
+  //   fetch("http://localhost:7000/users")
+  //     .then((r) => r.json())
+  //     .then((r) => setUser(r));
+  // }, [setUser]);
 
-  useEffect(() => {
-    fetch("http://localhost:7000/lecturers")
-      .then((r) => r.json())
-      .then((r) => setLecturer(r));
-  }, []);
+  // useEffect(() => {
+  //   fetch("http://localhost:7000/lecturers")
+  //     .then((r) => r.json())
+  //     .then((r) => setLecturer(r));
+  // }, []);
 
   useEffect(() => {
     fetch("http://localhost:7000/students")
@@ -30,31 +31,41 @@ export default function Students() {
       .then((r) => setStudent(r));
   }, []);
 
-  useEffect(() => {
-    fetch("http://localhost:7000/courses")
-      .then((r) => r.json())
-      .then((r) => setCourse(r));
-  }, []);
+  /*   let h  = {if (student === 0) {
+    return "Loading ..... ";
+  } else {
+    console.log(student);
+  }} */
 
-  useEffect(() => {
-    fetch("http://localhost:7000/cohorts")
-      .then((r) => r.json())
-      .then((r) => setCohort(r));
-  }, []);
+  let all = student === false ? "Loading ..." : student;
 
-  
+  let all1 = all[0];
+
+  console.log(all1);
+  // useEffect(() => {
+  //   fetch("http://localhost:7000/courses")
+  //     .then((r) => r.json())
+  //     .then((r) => setCourse(r));
+  // }, []);
+
+  // useEffect(() => {
+  //   fetch("http://localhost:7000/cohorts")
+  //     .then((r) => r.json())
+  //     .then((r) => setCohort(r));
+  // }, []);
+
   return (
     <main id="student">
       <section id="profile">
-        <img src="#" alt="user" />
-        <span></span>
+        <img src={all1.image} alt="user" />
+        <span>Grade: {all1.grade}</span>
         <span></span>
         <span></span>
         <span></span>
       </section>
       <section id="details">
         <div id="lecturer">
-          <span id="lec_image"></span>
+          <img src="#" alt="lecturer" id="lec_image" />
           <span id="lec_details">
             <span id="lec_name">Enock Mokua</span>
             <span id="course_details">
