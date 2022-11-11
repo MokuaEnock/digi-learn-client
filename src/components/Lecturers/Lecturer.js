@@ -125,7 +125,7 @@ export default function Lecturer() {
         <span>
           <span>{item.name}</span>
           <span className="pppp">
-            Grade: {item.grade}&nbsp; Date: {item.date_joined}
+            Grade: {item.grade}&nbsp; Date: {(item.date_joined).slice(0, 10)}
           </span>
         </span>
         <button onClick={handleStudentView(index)}>View</button>
@@ -139,7 +139,7 @@ export default function Lecturer() {
   let aside_student = newStudentItem.map((item, index) => {
     return (
       <section className="aside1" key={index}>
-        <div>Course</div>
+        <div>Student</div>
         <span>{item.name}</span>
         <span>Course: {item.course}</span>
         <span>Grade: {item.grade}</span>
@@ -208,7 +208,7 @@ export default function Lecturer() {
           </span>
           <div className="course_list">
             {course_cards}
-            <button className="view_button">View All</button>
+            {/* <button className="view_button">View All</button> */}
           </div>
         </div>
 
@@ -230,7 +230,7 @@ export default function Lecturer() {
           </span>
           <div className="student_list">
             {student_cards}
-            <button className="view_button">View All</button>
+            {/* <button className="view_button">View All</button> */}
           </div>
         </div>
       </section>

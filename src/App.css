@@ -435,6 +435,7 @@ label {
 
 .course_item,
 .student_item {
+  font-size: 1.3vw;
   box-shadow: .1vw .1vw .5vw grey;
 }
 
@@ -496,6 +497,7 @@ input:focus {
 #courses>.course_list {
   width: 100%;
   height: 85%;
+  font-size: 1.3vw;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -534,7 +536,7 @@ input:focus {
 .course_item>span>span {
   width: 100%;
   height: 50%;
-  font-size: 1.8vw;
+  font-size: 1.3vw;
   text-align: center;
   display: flex;
   flex-direction: row;
@@ -568,7 +570,7 @@ input:focus {
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  font-size: 1.7vw;
+  font-size: 1.3vw;
   font-weight: bold;
   letter-spacing: .2vw;
   border-radius: 2vw;
@@ -648,6 +650,7 @@ input:focus {
 #students>.student_list {
   width: 100%;
   height: 85%;
+  font-size: 1.3vw;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -659,7 +662,7 @@ input:focus {
 .student_item {
   width: 95%;
   height: 25%;
-
+  font-size: 1.3vw;
   display: flex;
   flex-direction: row;
   align-items: flex-end;
@@ -686,7 +689,7 @@ input:focus {
 .student_item>span>span {
   width: 100%;
   height: 50%;
-  font-size: 1.8vw;
+  font-size: 1.3vw;
   text-align: center;
   display: flex;
   flex-direction: row;
@@ -720,7 +723,7 @@ input:focus {
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  font-size: 1.7vw;
+  font-size: 1.3vw;
   font-weight: bold;
   letter-spacing: .2vw;
   border-radius: 2vw;
