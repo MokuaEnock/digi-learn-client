@@ -1,0 +1,176 @@
+#student {
+    width: 100%;
+    height: 45vw;
+    font-size: 1.5vw;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#student>* {
+
+    height: 100%;
+}
+
+#profile {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#profile>img {
+    width: 15vw;
+    height: 15vw;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: white;
+}
+
+#profile>span {
+    width: 90%;
+    height: 12%;
+    background-color: white;
+    border-radius: .5vw;
+    box-shadow: rgb(0 0 0 / 16%) 1px 1px 10px;
+
+}
+
+#details {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+}
+
+#course {
+    width: 100%;
+    height: 75%;
+
+    display: flex;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+
+#course>* {
+    margin-bottom: .5vw;
+}
+
+#title {
+    width: 100%;
+    height: 15%;
+    letter-spacing: .2vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 3vw;
+    font-weight: 500;
+    text-decoration: underline;
+}
+
+
+#description {
+    width: 90%;
+    font-size: 1.5vw;
+    font-weight: 200;
+    text-align: justify;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    letter-spacing: .03vw;
+    line-height: 2.5vw;
+
+}
+
+
+#objectives {
+    width: 90%;
+    letter-spacing: .03vw;
+    text-align: justify;
+    font-size: 1.5vw;
+    font-weight: 200;
+    height: max-content;
+
+}
+
+#objectives>* {
+    margin-top: .5vw;
+}
+
+#lecturer {
+    margin-top: .5vw;
+    border-radius: .5vw;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+    width: 99%;
+    height: 25%;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#lecturer>* {}
+
+#lec_image {
+    width: 9vw;
+    height: 9vw;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: grey;
+}
+
+#lec_details {
+    width: 78%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#lec_details>* {
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#lec_name {
+    width: 100%;
+    height: 50%;
+}
+
+#course_details {
+    width: 100%;
+    height: 50%;
+}
+
+/* #course_details>* {
+    margin-top: 3vw;
+} */
+
+
+#waste {
+    width: 10%;
+
+}
