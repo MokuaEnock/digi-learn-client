@@ -238,7 +238,7 @@ export default function Lecturer() {
         </div>
       </section>
 
-      <>{aside_student || aside_course}</>
+      <>{aside_student}</>
       <>{aside_course}</>
     </main>
   );
