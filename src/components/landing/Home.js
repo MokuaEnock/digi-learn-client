@@ -1,8 +1,8 @@
 import React from "react";
 //import { image, pic } from "./Data";
-import Image from "./img/image2.png";
-import Pic from "./img/image3.png";
-import Check from "./img/check-mark.png";
+import Image from "../img/image2.png";
+import Pic from "../img/image3.png";
+import Check from "../img/check-mark.png";
 import {useNavigate} from "react-router-dom"
 
 
