@@ -1,85 +1,40 @@
-# Author : Enock Mokua 
-# Author : Andreen Muchiri
-# Author : Duncan Langat 
-# Author : Jose Muhlanga
-# Author : Ferdinant Mukodo
+# Introduction
 
-## Project Description
+We are familiar with the difficulties that accompany dealing with a school particularly while
+record-keeping is involved.For a school to be appropriately managed ,the frameworks set up to
+deal with all records of the school should be very much organized and moving along as
+planned.
 
-Our project aim is aid learning institutions manage their 
-school record better. They can be able to have all student details and also staff details all in one place, which can be easily accessed.exceptionally productive and saves alot of time
-# Screenshots
+# Problem Statement
+
+The methods involved in record keeping differ from set up to set up, but the more the system is
+well structured the better it is for the management of records. Some schools still hold onto the old
+ways of record-keeping through files and books which is very inefficient. For one the files can get
+destroyed and retrieving the data is also very time consuming.
+It is even worse for larger learning institutions that do not have good school management
+frameworks in place. This can cause chaos and slow down production and work in the learning
+environment.
+Digilearn_Records is a platform designed to aid learning institutions manage their school
+records better. They can be able to have all student details and also staff details all in one
+place, which can be easily accessed. It is exceptionally productive and saves alot of time.
+
+# Minimum Viable Product
+
+The first version of the website must meet the following metrics;
+● Schools can enter student details upon registration.
+● Schools can enter lecturer details.
+● Schools can get access to details of a specific course offered.
+● Schools can get access to student details and their respective classes and courses.
+
+# Technologies
+
+1. React.Js
+2. Bootstrap
+3. JSX
+4. CSS
+5. Ruby
+6. Sinatra API
+
+# Website Shots
 
 ![Screenshot from 2022-11-10 23-55-48](https://user-images.githubusercontent.com/108465603/201204108-99b735fb-1627-4049-9c02-040c098a8eba.png)
-[Screenshot from 2022-11-10 23-27-42](https://user-images.githubusercontent.com/108465603/201203198-cbf88ed0-de0f-49fa-bde7-e2edcf579296.png)
-![Screenshot from 2022-11-10 23-28-53](https://user-images.githubusercontent.com/108465603/201203202-05d04457-7060-4cea-9cc6-9adbdcefc540.png)
-![Screenshot from 2022-11-10 23-29-06](https://user-images.githubusercontent.com/108465603/201203213-e4cfe09d-3f18-4b74-a006-c4d4e67c00c7.png)
-![Screenshot from 2022-11-10 23-29-08](https://user-images.githubusercontent.com/108465603/201203221-24fa3730-f74a-42bd-87cc-9ebe452ead87.png)
-![Screenshot from 2022-11-10 23-29-21](https://user-images.githubusercontent.com/108465603/201203224-3e261e55-2d9e-44d3-9c6f-64cae99dcb0f.png)
-![Screenshot from 2022-11-10 23-49-53](https://user-images.githubusercontent.com/108465603/201203227-1fff1310-2c72-4695-8e57-c732cc73552d.png)
-
-# SetUp Instruction
-
-## Requirements
-
-[HTML](lang Url) Text editor eg Visual Studio Code
-Getting Files
-
-# Fork the repo
-
-Create a new branch in your terminal (git checkout -b improve-feature) Install the prerequisites :
-
-    npm install
-    npm install bootstrap Make appropriate changes in file(s) Run the server to see the changes using: npm start Add the changes and commit them (git commit -am "Improve App") Push to the branch (git push origin improve-app) Create a Pull request
-
-Open the folder location on terminal and use the following command to run app: npm start
-Technologies Used:
-
-## ReactJs CSS Bootstrap V5 JavaScript
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-#Link to Backend
-https://github.com/MokuaEnock/digi-learn-server
-
-# Contact Information
-
-## Email : duncan.langat@student.moringaschool.com
-## Email : jose.muhlanga@student.moringaschool.com
-## Email : adreen.muchiri@student.moringaschool.com
-## Email : enock.mokua@student.moringaschool.com
-## Email : ferdinant.mukodo@student.moringaschool.com
-
-
-# License
-
-MIT License
-
-Copyright (c) [2019] [**]
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software
-
-# Go back to the top
