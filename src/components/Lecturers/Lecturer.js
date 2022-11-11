@@ -12,6 +12,8 @@ export default function Lecturer() {
   let [searchStudent, setSearchStudent] = useState([]);
   let [newStudentItem, setNewStudentItem] = useState([]);
   let [newCourseItem, setNewCourseItem] = useState([]);
+  let [filterCourse, setFilterCourse] = useState([]);
+  let [filterStudent, setFilterStudent] = useState([]);
 
   /* fetching data */
   useEffect(() => {
@@ -52,6 +54,7 @@ export default function Lecturer() {
         (val) => typeof val === "string" && val.includes(searchCourse)
       )
     );
+    setFilterStudent(filteredCourses);
   }
 
   /* function to create student object */
@@ -103,6 +106,7 @@ export default function Lecturer() {
         (val) => typeof val === "string" && val.includes(searchStudent)
       )
     );
+    setFilterStudent(filteredStudents);
   }
 
   /* function to handle studnet view button */
@@ -125,7 +129,22 @@ export default function Lecturer() {
         <span>
           <span>{item.name}</span>
           <span className="pppp">
-            Grade: {item.grade}&nbsp; Date: {(item.date_joined).slice(0, 10)}
+            Grade: {item.grade}&nbsp; Date: {item.date_joined.slice(0, 10)}
+          </span>
+        </span>
+        <button onClick={handleStudentView(index)}>View</button>
+      </span>
+    );
+  });
+
+  let filter_students = filterStudent.map((item, index) => {
+    return (
+      <span className="course_item" key={item.id}>
+        <img src={item.image} alt="course" />
+        <span>
+          <span>{item.name}</span>
+          <span className="pppp">
+            Grade: {item.grade}&nbsp; Date: {item.date_joined.slice(0, 10)}
           </span>
         </span>
         <button onClick={handleStudentView(index)}>View</button>
@@ -161,6 +180,8 @@ export default function Lecturer() {
     );
   });
 
+  console.log(filterCourse, filterStudent);
+
   /* function to render course cards set with data */
   let course_cards = course.map((item, index) => {
     return (
@@ -173,6 +194,26 @@ export default function Lecturer() {
       </span>
     );
   });
+
+  let filter_courses = filterCourse.map((item, index) => {
+    return (
+      <span className="course_item" key={item.id}>
+        <span>
+          <span>{item.name}</span>
+          <span className="pppp">{item.description}</span>
+        </span>
+        <button onClick={handleCourseView(index)}>View</button>
+      </span>
+    );
+  });
+
+  function display(a, b) {
+    if (a.length === 0) {
+      return b;
+    } else {
+      return a;
+    }
+  }
 
   return (
     <main id="lecturer">
@@ -207,7 +248,7 @@ export default function Lecturer() {
             </form>
           </span>
           <div className="course_list">
-            {course_cards}
+            {display(filter_courses, course_cards)}
             {/* <button className="view_button">View All</button> */}
           </div>
         </div>
@@ -229,8 +270,7 @@ export default function Lecturer() {
             </form>
           </span>
           <div className="student_list">
-            {student_cards}
-            {/* <button className="view_button">View All</button> */}
+            {display(filter_students, student_cards)}
           </div>
         </div>
       </section>
