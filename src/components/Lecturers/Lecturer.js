@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import "./lec.css";
 
 export default function Lecturer() {
   /* usestate and useeffect */
@@ -106,20 +107,12 @@ export default function Lecturer() {
 
   /* function to handle studnet view button */
   let handleStudentView = (index) => () => {
-    let courseee = document.querySelector(".main_course_aside");
-    let ssstudent = document.querySelector(".main_student_aside");
-    ssstudent.style.display = "flex";
-    courseee.style.display = "none";
     let newItem = students[index];
     return setNewStudentItem([newItem]);
   };
 
   /* function to handle studnet view button */
   let handleCourseView = (index) => () => {
-    let courseee = document.querySelector(".main_course_aside");
-    let ssstudent = document.querySelector(".main_student_aside");
-    ssstudent.style.display = "none";
-    courseee.style.display = "flex";
     let newItem = course[index];
     return setNewCourseItem([newItem]);
   };
@@ -140,30 +133,31 @@ export default function Lecturer() {
     );
   });
 
+  console.log(lecturer);
+
   /* fucntion render cards to main aside student component */
-  let aside_student = newStudentItem.map((item) => {
+  let aside_student = newStudentItem.map((item, index) => {
     return (
-      <aside id="main_student" className="main_student_aside">
-        <span id="lecturer_name">{item.name}</span>
-        <img src={item.image} alt="student" />
-        <span id="lecturer_course">Course: {item.course}</span>
-        <span id="student_number">Lec: {item.lecturer}</span>
-        <span id="average_grade">Grade: {item.grade}</span>
-        <span>Rank: {Math.floor(Math.random() * 3) + 1}</span>
-        <span id="date_joined">{item.date_joined}</span>
-      </aside>
+      <section className="aside1" key={index}>
+        <div>Course</div>
+        <span>{item.name}</span>
+        <span>Course: {item.course}</span>
+        <span>Grade: {item.grade}</span>
+        <span>{item.date_joined.slice(0, 10)}</span>
+      </section>
     );
   });
 
   /* fucntion render cards to main aside student component */
   let aside_course = newCourseItem.map((item) => {
     return (
-      <aside id="main_student" className="main_course_aside">
-        <span id="lecturer_name">{item.name}</span>
-        <span id="lecturer_course">Duration: {item.duration} months.</span>
-        <span id="student_number">Lec: {item.description}</span>
-        <span id="date_joined">{item.updated_at}</span>
-      </aside>
+      <section className="aside1" key={item.id}>
+        <div>Course</div>
+        <span>{item.name}</span>
+        <span>Duration: {item.duration} months.</span>
+        <span>Lec: {item.description}</span>
+        <span>{item.updated_at.slice(0, 10)}</span>
+      </section>
     );
   });
 
@@ -183,10 +177,13 @@ export default function Lecturer() {
   return (
     <main id="lecturer">
       <aside id="main_lecturer">
-        <span id="lecturer_name">Lecturer name</span>
-        <img src="#" alt="lecturer" />
+        <span id="lecturer_name">Enock Mokua</span>
+        <img
+          src="https://robohash.org/essenatuset.png?size=300x300&set=set1"
+          alt="lecturer"
+        />
         <span id="lecturer_course">Machine Learning</span>
-        <span id="student_number">Students: 117</span>
+        <span id="student_number">Students: {user.length}</span>
         <span id="average_grade">Average grade: 78</span>
         <span id="date_joined">Date Joined: 08/12/2012</span>
         <span></span>
@@ -238,8 +235,10 @@ export default function Lecturer() {
         </div>
       </section>
 
-      <>{aside_student}</>
-      <>{aside_course}</>
+      <aside id="aside1">
+        {aside_course}
+        {aside_student}
+      </aside>
     </main>
   );
 }

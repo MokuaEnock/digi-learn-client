@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./student.css";
 
 export default function Students() {
+  /* usestate and useeffect */
   let [lecturer, setLecturer] = useState([]);
   let [user, setUser] = useState([]);
   let [student, setStudent] = useState([]);
@@ -12,6 +13,7 @@ export default function Students() {
   let [newStudentItem, setNewStudentItem] = useState([]);
   let [newCourseItem, setNewCourseItem] = useState([]);
 
+  /* fetching data */
   useEffect(() => {
     fetch("http://localhost:7000/users")
       .then((r) => r.json())
@@ -28,6 +30,18 @@ export default function Students() {
     fetch("http://localhost:7000/students")
       .then((r) => r.json())
       .then((r) => setStudent(r));
+  }, []);
+
+  useEffect(() => {
+    fetch("http://localhost:7000/courses")
+      .then((r) => r.json())
+      .then((r) => setCourse(r));
+  }, []);
+
+  useEffect(() => {
+    fetch("http://localhost:7000/cohorts")
+      .then((r) => r.json())
+      .then((r) => setCohort(r));
   }, []);
 
   let all = student.length === 0 ? "Loading ..." : student;
