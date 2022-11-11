@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { ErrorBoundary } from "react-error-boundary";
 import "./student.css";
 
 export default function Students() {
@@ -36,10 +35,7 @@ export default function Students() {
   let lecturers = user.length === 0 ? "Loading ..." : lecturer;
 
   let all1 = all[0];
-  console.log(all1);
-
   let users1 = users[0];
-  console.log(users1);
   let rank = Math.floor(Math.random() * 10) + 1;
 
   return (
@@ -48,7 +44,6 @@ export default function Students() {
         <img src={all1.image} alt="user" />
         <span>Grade: {all1.grade}</span>
         <span>Name: {users1.name}</span>
-        {/* <span>Joined: {date}</span> */}
         <span>Rank: {rank}</span>
       </section>
       <section id="details">
